@@ -1,42 +1,45 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from 'styled-components'
+
+import Logo from '../images/Logo-portfolio.png'
+
+const HeaderBanner = styled.header`
+    background: #2c5364;
+    margin-bottom: 1.45rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+`
+
+const LogoStyled = styled.img`
+    width: 100px;
+    height: auto;
+    margin: 0;
+    vertical-align: middle;
+`
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+    <HeaderBanner>
         <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+            to="/"
+            style={{
+                color: `white`,
+                textDecoration: `none`
+            }}
+        ><LogoStyled src={Logo} alt="MP logo" />
         </Link>
-      </h1>
-    </div>
-  </header>
+        <h3 style={{ margin: 'auto 0', color: '#ddd' }}>Blog</h3>
+    </HeaderBanner>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+    siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+    siteTitle: ``,
 }
 
 export default Header
