@@ -7,7 +7,6 @@ import Logo from '../images/Logo-portfolio.png'
 
 const HeaderBanner = styled.header`
     background: #2c5364;
-    margin-bottom: 1.45rem;
     padding: 0 1rem;
     display: flex;
     align-items: center;
