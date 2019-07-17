@@ -1,6 +1,6 @@
 ---
 title: "My banana"
-date: "2019-07-15"
+date: "04. July 2019"
 description: "My first page about banana"
 ---
 

@@ -10,17 +10,25 @@ const BlogWrapper = styled.div`
     padding: 1rem;
     margin: 1.5rem 0;
     -webkit-box-shadow: 6px 6px 9px -4px rgba(0,0,0,0.75);
--moz-box-shadow: 6px 6px 9px -4px rgba(0,0,0,0.75);
-box-shadow: 6px 6px 9px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 9px -4px rgba(0,0,0,0.75);
+    box-shadow: 6px 6px 9px -4px rgba(0,0,0,0.75);
 `
 
 const BlogLink = styled(Link)`
   text-decoration: none;
+  color: grey;
 `
 
 const BlogTitle = styled.h3`
   margin-bottom: 20px;
-  color: green;
+  color: black;
+  line-height: 30px;
+`
+
+const BlogDate = styled.div`
+    color: grey;
+    font-family: "Segoe UI";
+    font-size: 0.8em;
 `
 
 export default ({ data }) => {
@@ -34,10 +42,11 @@ export default ({ data }) => {
                 {data.allMarkdownRemark.edges.map(({ node }) => (
                     <BlogWrapper key={node.id}>
                         <BlogLink to={node.fields.slug}>
-                            <BlogTitle>{node.frontmatter.title} - {node.frontmatter.date}
+                            <BlogTitle>{node.frontmatter.title}
                             </BlogTitle>
                             <p>{node.excerpt}</p>
                         </BlogLink>
+                        <BlogDate>{node.frontmatter.date}</BlogDate>
                     </BlogWrapper>
                 ))
                 }
