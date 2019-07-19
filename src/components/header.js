@@ -11,8 +11,8 @@ const HeaderBanner = styled.header`
     display: flex;
     align-items: center;
     -webkit-box-shadow: 0px 5px 23px 15px rgba(169,169,169,1);
--moz-box-shadow: 0px 5px 23px 15px rgba(169,169,169,1);
-box-shadow: 0px 5px 23px 15px rgba(169,169,169,1);
+    -moz-box-shadow: 0px 5px 23px 15px rgba(169,169,169,1);
+    box-shadow: 0px 5px 23px 15px rgba(169,169,169,1);
 `
 
 const LogoStyled = styled.img`

@@ -26,7 +26,7 @@ export default ({ data }) => {
             <Container>
                 <h1>{post.frontmatter.title}</h1>
                 <Description>{post.frontmatter.description}</Description>
-                <BlogDate>{post.frontmatter.date}</BlogDate>
+                <BlogDate><span>Published: </span>{post.frontmatter.date}</BlogDate>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </Container>
         </Layout>

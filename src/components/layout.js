@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
 
 const Container = styled.div`
@@ -12,20 +13,11 @@ const Container = styled.div`
 `
 
 const Main = styled.main`
-    padding: 3rem;
+    padding: 5rem;
     height: 100%;
-`
-
-const Footer = styled.footer`
-    background: #2c5364;
-    color: #ddd;
-    height: 6vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 2.2rem;
-    font-size: 0.8em;
+    a {
+        font-style: italic;
+    }
 `
 
 const Layout = ({ children }) => {
@@ -52,9 +44,7 @@ const Layout = ({ children }) => {
             >
                 <Main>{children}</Main>
             </Container>
-            <Footer>
-                © {new Date().getFullYear()}, Miroslav Pillar
-            </Footer>
+            <Footer />
         </>
     )
 }
