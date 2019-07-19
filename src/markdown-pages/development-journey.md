@@ -6,9 +6,9 @@ description: "I wanted to become a full-time developer, so I set a goal to get a
 
 ***
 
-You are asking yourself, why should you read this article and why should you even care. However, I see many smart people who are not filled by their current job and they are searching for a change, but don't know, where to start. Or people, who want to become developers one day, but are discouraged they don't have enough skills or computer science degree. Well, I hope this is a proper place for finding new motivation, obtain another sources for development or just spend your free time by flicking through useful blogs.
+You are asking yourself, why should you read this article. However, I see many smart people who are not fulfilled by their current job and they are searching for a change, but don't even know, where to start. Or people, who want to become developers one day, but are discouraged they don't have enough skills or computer science degree. Well, I hope this is a proper place for finding new motivation, obtain another sources for development or just spend your free time by flicking through useful blogs.
 
-###
+### A little word about me
 
 Okay, that's a nice word for the introduction. But who am I actually? I'd like to introduce myself, so you know, whom are you reading about. If you are not interested, feel free to skip this part.
 
@@ -16,7 +16,10 @@ My name is Miroslav Pillar and I come from small city of Kosice in Slovakia (mid
 
 ### Motivation as a first pillar of success
 
-For the start, I would like to point out that following ideas are purely subjective and I am drawing ideas only from my experience up to now, so please don't judge and feel free to make your own opinions.
+> " There’s no reason to have a plan B because it distracts from plan A. " 
+> – Will Smith
+
+For the start, I would like to point out that following ideas are purely subjective and I am drawing ideas only from my experience up to now, so feel free to make your own decisions and opinions.
 
 It all started, when I was studying at university. I couln't imagine, which full-time job would suit me and I was just studying, because I had to. However, I started to browse youtube channels (besides playing video games and hanging out) to find new point of view and move on. I think [Michael Valmont](https://www.youtube.com/channel/UCD-cyDCJUs80NGUCYTCVPDA) had created most useful videos I have ever came across - among other things - about [Will Smith](https://www.youtube.com/watch?v=1CbMDE1ZzHA) and [Connor McGregor](https://www.youtube.com/watch?v=FrYv01Z1Hek). I believe it's truly important to have our own model to stay motivated in long-term. 
 
@@ -26,9 +29,12 @@ It's worth to mention also channel [Actualized.org](https://www.youtube.com/chan
 
 So I finished the school and I was asking myself 'now what'? Shortly after state exam I got an offer to work as technical support in one IT company. I didn't have any technical background, but I can speak German and English, which was my huge advantage. I realized, that language skills are highly valuated by employers and if you know some, you are drastically increasing chances to get a decent job. And I am sure, my country is not the only example..
 
-Altough the job was not repulsive, I couldn't do technical support my whole life. I started to digging into programming and enrolled in courses about HTML, CSS and Javascript from [Codecademy](https://www.codecademy.com/) and [Freecodecamp](https://www.freecodecamp.org/). I also watched videos from [mmtuts](https://www.youtube.com/channel/UCzyuZJ8zZ-Lhfnz41DG5qLw) mostly about HTML and CSS. There is also slovak [course Webrebel](https://www.learn2code.sk/kurzy/webrebel-1-html-css-javascript) thanks to learn2code.sk.
+Altough the job was not repulsive, I couldn't do technical support my whole life. I started to digging into programming and enrolled in courses about HTML, CSS and Javascript from [Codecademy](https://www.codecademy.com/) and [Freecodecamp](https://www.freecodecamp.org/). There are a lot of free videos on Youtube you can watch, f.e. from [mmtuts](https://www.youtube.com/channel/UCzyuZJ8zZ-Lhfnz41DG5qLw) and [Traversy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA) about HTML and CSS. For Slovaks I can highly recommend course [Webrebel](https://www.learn2code.sk/kurzy/webrebel-1-html-css-javascript) thanks to learn2code.sk.
 
 ### Learning the whole ecosystem
+
+> " The strength of JavaScript is that you can do anything. The weakness is that you will. "
+> – Reg Braithwaite
 
 After tutorials mentioned above I knew only particles without whole ecosystem. I didn't feel confident to build a complex project or apply for a web developer job. The holes started to fulfill (and also overflow!) when I enrolled to [The Complete Web Developer - Zero to Mastery](https://www.udemy.com/the-complete-web-developer-zero-to-mastery/) led by truly great and authentic teacher Andrei Neagoie. The final project was full-stack based face recognition app and [this](https://sharp-shockley-0c9ce8.netlify.com/) is my version. 
 
@@ -42,9 +48,24 @@ Until I finally succeeded, where I had to pass 3 rounds of technical interview..
 
 ### The dark side
 
-Of course I had days I stopped learning and [impostor syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome) played his role (and sometimes still does). But I gave it time and I knew, what is my goal and why I wanted to do it. I also knew, what I don't want to do. So again - motivation was crucial factor in this play. Since last year I am trying to code regularly (at least 5 times a week) - solve algorhitms, contribute on projects or just sharpening my skills by watching videos about new technologies.
+Of course I had days I stopped learning and [impostor syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome) played his role (and sometimes still does). Or I wasn't able to solve technical problem. But I gave it time and I knew, what is my goal and why I wanted to do it. I also knew, what I don't want to do. 
 
-Now I am working as Javascript software developer, where I daily use knowledge from enrolled courses and built projects - React, Redux, CSS, SQL, devops and much more..
+So again - motivation was crucial factor in this play. Since last year I am trying to code regularly (at least 5 times a week) - solve algorhitms, contribute on projects or just sharpening my skills by watching videos about new technologies.
+
+There is great [article](https://www.freecodecamp.org/news/how-to-think-like-a-programmer-lessons-in-problem-solving-d1d8bf1de7d2/) about approaching problems, which I highly recommend! 
+
+### Summary
+
+> " There's no place like 127.0.0.1. "
+> – anonymous
+
+How can you approach learning (not only) development in few steps and become successful:
+
+1. _Motivation_ - have your own model to stay motivated in long-term
+2. _Regularity_ - code and learn new technologies at least 4-5 days a week
+3. _Creativity_ - build your own projects. Employers appreciate practical experience. I would be keen to invite someone on interview, who contributes in open-source projects.
+4. _Humbleness_ - don't solve excessively hard problems for many hours. Simplify things by dividing problems into smaller parts. Use google, because most likely someone had solved this problem before.
+5. _Relax_ - try not to burn out. It's okay to have a break for few days and continue if you have apetite for coding again.
 
 Thank you for reading and stay sharp!
 

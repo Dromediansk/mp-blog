@@ -386,7 +386,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  line-height: 30px;
+  line-height: 33px;
 }
 figure {
   margin-left: 0;
@@ -436,14 +436,13 @@ fieldset {
   margin-bottom: 1.45rem;
 }
 blockquote {
-  margin-left: 1.45rem;
-  margin-right: 1.45rem;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin: 2.5rem auto;
+  padding: 1rem 2rem;
+  color: grey;
+  font-style: italic;
+  width: 80%;
+  background: #eee;
+  border-radius: 5px;
 }
 form {
   margin-left: 0;

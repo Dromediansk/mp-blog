@@ -51,6 +51,7 @@ const BlogDate = styled.div`
     color: grey;
     font-family: "Segoe UI";
     font-size: 0.8em;
+    margin-left: 1rem;
 `
 
 export default ({ data }) => {

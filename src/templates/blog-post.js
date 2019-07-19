@@ -3,8 +3,12 @@ import { graphql } from "gatsby"
 import Layout from '../components/layout'
 import styled from 'styled-components'
 
+import AvatarPhoto from '../images/avatar.jpg'
+
 const Container = styled.div`
-    text-align: justify;
+    p {
+        text-align: justify;
+    }
 `
 
 const BlogDate = styled.div`
@@ -13,10 +17,24 @@ const BlogDate = styled.div`
     font-size: 0.8em;
 `
 
+const Wrapper = styled.div`
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+`
+
 const Description = styled.p`
     color: grey;
-    padding: 1rem 0;
+    padding: 1rem;
     font-style: italic;
+`
+
+const Avatar = styled.div`
+    width: 200px;
+    img {
+        border-radius: 50%;
+        border: 2px double black;
+    }
 `
 
 export default ({ data }) => {
@@ -25,7 +43,12 @@ export default ({ data }) => {
         <Layout>
             <Container>
                 <h1>{post.frontmatter.title}</h1>
-                <Description>{post.frontmatter.description}</Description>
+                <Wrapper>
+                    <Avatar>
+                        <img src={AvatarPhoto} alt="avatar" />
+                    </Avatar>
+                    <Description>{post.frontmatter.description}</Description>
+                </Wrapper>
                 <BlogDate><span>Published: </span>{post.frontmatter.date}</BlogDate>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </Container>
