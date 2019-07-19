@@ -1,7 +1,8 @@
 ---
-title: "Journey to web development or how to transform desires into reality"
+title: "Guide to web development or how to get a job without computer science degree"
+author: "Miroslav Pillar"
 date: "13. July 2019"
-description: "I wanted to become a full-time developer, so I set a goal to get a job within one year. In fact, I got it after 7 months - without computer science degree."
+description: "I wanted to become a full-time developer, so I set a goal to get a job within one year. In fact, I got it after 7 months."
 ---
 
 ***
@@ -16,7 +17,7 @@ My name is Miroslav Pillar and I come from small city of Kosice in Slovakia (mid
 
 ### Motivation as a first pillar of success
 
-> " There’s no reason to have a plan B because it distracts from plan A. " 
+> "There’s no reason to have a plan B because it distracts from plan A." 
 > – Will Smith
 
 For the start, I would like to point out that following ideas are purely subjective and I am drawing ideas only from my experience up to now, so feel free to make your own decisions and opinions.
@@ -33,10 +34,10 @@ Altough the job was not repulsive, I couldn't do technical support my whole life
 
 ### Learning the whole ecosystem
 
-> " The strength of JavaScript is that you can do anything. The weakness is that you will. "
+> "The strength of JavaScript is that you can do anything. The weakness is that you will."
 > – Reg Braithwaite
 
-After tutorials mentioned above I knew only particles without whole ecosystem. I didn't feel confident to build a complex project or apply for a web developer job. The holes started to fulfill (and also overflow!) when I enrolled to [The Complete Web Developer - Zero to Mastery](https://www.udemy.com/the-complete-web-developer-zero-to-mastery/) led by truly great and authentic teacher Andrei Neagoie. The final project was full-stack based face recognition app and [this](https://sharp-shockley-0c9ce8.netlify.com/) is my version. 
+After tutorials mentioned above I knew only particles without whole ecosystem. I didn't feel confident to build a complex project or apply for a web developer job. The holes started to fulfill (and also overflow!) when I enrolled to [The Complete Web Developer - Zero to Mastery](https://www.udemy.com/the-complete-web-developer-zero-to-mastery/) led by truly great and authentic teacher Andrei Neagoie. The final project was full-stack based [face recognition app](https://sharp-shockley-0c9ce8.netlify.com/). 
 
 Besides that I also started to build my own projects and Google has become my best friend. My first [React](https://reactjs.org/) project was [Star Wars Scout](https://dromediansk.github.io/star-wars-scout/), in which you can find basic info about your favourite character. Then I spent some time by creating my own [portfolio](https://miroslavpillar.tk/) in React and [Sass](https://sass-lang.com/). I was truly proud on myself. I've also started to contribute on open-source projects, f. e. [ZeroToMastery](https://zerotomastery.io/) or [Fullstacktrends](https://www.fullstacktrends.com/) created by ZTM community. You can find all my repos on [GitHub](https://github.com/Dromediansk?tab=repositories).
 
@@ -52,11 +53,11 @@ Of course I had days I stopped learning and [impostor syndrome](https://en.wikip
 
 So again - motivation was crucial factor in this play. Since last year I am trying to code regularly (at least 5 times a week) - solve algorhitms, contribute on projects or just sharpening my skills by watching videos about new technologies.
 
-There is great [article](https://www.freecodecamp.org/news/how-to-think-like-a-programmer-lessons-in-problem-solving-d1d8bf1de7d2/) about approaching problems, which I highly recommend! 
+There is a great article [how to deal with tough problems](https://www.freecodecamp.org/news/how-to-think-like-a-programmer-lessons-in-problem-solving-d1d8bf1de7d2/), which I highly recommend! 
 
 ### Summary
 
-> " There's no place like 127.0.0.1. "
+> "There's no place like 127.0.0.1."
 > – anonymous
 
 How can you approach learning (not only) development in few steps and become successful:

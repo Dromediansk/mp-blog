@@ -18,6 +18,9 @@ const Main = styled.main`
     a {
         font-style: italic;
     }
+    @media only screen and (max-width: 768px) {
+        padding: 2rem 1rem;
+  }
 `
 
 const Layout = ({ children }) => {

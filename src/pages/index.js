@@ -9,7 +9,7 @@ import JourneyPhoto from '../images/journey.jpg'
 
 const BlogWrapper = styled.div`
     border: 2px solid #ddd;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     margin: 1.5rem 0;
     -webkit-box-shadow: 6px 6px 9px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 6px 6px 9px -4px rgba(0,0,0,0.75);
@@ -22,16 +22,20 @@ const BlogWrapper = styled.div`
 const BlogLink = styled(Link)`
   text-decoration: none;
   color: grey;
-  display: flex;
-  align-items: center;
-  div {
-      margin: 0.5rem 1rem;
+  p {
+      padding-top: 1rem;
   }
 `
 
+const TitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
 const ImageContainer = styled.div`
-    width: 35rem;
-    height: 10rem;
+    width: 21rem;
+    height: 7rem;
     border: 2px double black;
     overflow: hidden;
     img {
@@ -43,15 +47,18 @@ const ImageContainer = styled.div`
 
 const BlogTitle = styled.h3`
   margin-bottom: 20px;
+  padding-right: 0.5rem;
   color: black;
   line-height: 30px;
+  @media only screen and (max-width: 768px) {
+        font-size: 1.2rem;
+  }
 `
 
 const BlogDate = styled.div`
     color: grey;
     font-family: "Segoe UI";
     font-size: 0.8em;
-    margin-left: 1rem;
 `
 
 export default ({ data }) => {
@@ -65,14 +72,14 @@ export default ({ data }) => {
                 {data.allMarkdownRemark.edges.map(({ node }) => (
                     <BlogWrapper key={node.id}>
                         <BlogLink to={node.fields.slug}>
-                            <div>
+                            <TitleWrapper>
                                 <BlogTitle>{node.frontmatter.title}
                                 </BlogTitle>
-                                <p>{node.excerpt}</p>
-                            </div>
-                            <ImageContainer>
-                                <img src={JourneyPhoto} alt="journey" />
-                            </ImageContainer>
+                                <ImageContainer>
+                                    <img src={JourneyPhoto} alt="journey" />
+                                </ImageContainer>
+                            </TitleWrapper>
+                            <p>{node.excerpt}</p>
                         </BlogLink>
                         <BlogDate>{node.frontmatter.date}</BlogDate>
                     </BlogWrapper>

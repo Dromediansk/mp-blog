@@ -11,7 +11,9 @@ const Container = styled.div`
     }
 `
 
-const BlogDate = styled.div`
+const BlogPublish = styled.div`
+    display: flex;
+    justify-content: space-between;
     color: grey;
     font-family: "Segoe UI";
     font-size: 0.8em;
@@ -49,7 +51,10 @@ export default ({ data }) => {
                     </Avatar>
                     <Description>{post.frontmatter.description}</Description>
                 </Wrapper>
-                <BlogDate><span>Published: </span>{post.frontmatter.date}</BlogDate>
+                <BlogPublish>
+                    <span>Published: {post.frontmatter.date}</span>
+                    <span>Author: {post.frontmatter.author}</span>
+                </BlogPublish>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </Container>
         </Layout>
@@ -62,6 +67,7 @@ export const query = graphql`
             html
             frontmatter {
                 title
+                author
                 date
                 description
             }

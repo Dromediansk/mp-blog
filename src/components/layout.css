@@ -514,9 +514,11 @@ li {
 }
 ol li {
   padding-left: 0;
+  line-height: 33px;
 }
 ul li {
   padding-left: 0;
+  line-height: 33px;
 }
 li > ol {
   margin-left: 1.45rem;
@@ -620,6 +622,15 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    blockquote {
+        width: 95%;
+    }
 }
 
 ::-webkit-scrollbar {
