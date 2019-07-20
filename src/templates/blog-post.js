@@ -86,7 +86,7 @@ const Linkedin = styled(LinkedinSquare)`
 
 export default ({ data, pageContext }) => {
     const post = data.markdownRemark;
-    const baseUrl = 'https://blog.miroslavpillar.com/';
+    const baseUrl = 'https://blog.miroslavpillar.com';
     const disqusShortname = 'blog-miroslavpillar-com'
     const disqusConfig = {
         identifier: data.markdownRemark.id,
