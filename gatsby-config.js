@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: `Miroslav's blog`,
-        description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-        author: `@gatsbyjs`,
+        title: `MP Blog`,
+        description: `Blog section about web development, Javascript and React to bring to developers new inspiration and learn something new.`,
+        author: `Miroslav Pillar`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -20,7 +20,20 @@ module.exports = {
                 path: `${__dirname}/src/markdown-pages`,
             },
         },
-        `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [
+                    {
+                        resolve: "gatsby-remark-external-links",
+                        options: {
+                            target: "_blank",
+                            rel: "nofollow noopener noreferrer"
+                        }
+                    }
+                ]
+            }
+        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-sharp`,

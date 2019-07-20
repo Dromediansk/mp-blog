@@ -39,6 +39,21 @@ const Avatar = styled.div`
     }
 `
 
+const ContactLinks = styled.ul`
+    padding: 1rem;
+    background: #eee;
+    border-radius: 10px;
+    font-style: italic;
+    p {
+        margin-bottom: 0.5rem;
+    }
+    li {
+        list-style-type: none;
+        margin-left: 1rem;
+        line-height: 20px;
+    }
+`
+
 export default ({ data }) => {
     const post = data.markdownRemark;
     return (
@@ -56,6 +71,12 @@ export default ({ data }) => {
                     <span>Author: {post.frontmatter.author}</span>
                 </BlogPublish>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <ContactLinks>
+                    <p>Contact:</p>
+                    <li>Website: <a href="https://www.miroslavpillar.com" target="_blank" rel="noopener noreferrer">www.miroslavpillar.com</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/miroslavpillar/" target="_blank" rel="noopener noreferrer">Miroslav Pillar</a></li>
+                    <li>GitHub: <a href="https://github.com/Dromediansk" target="_blank" rel="noopener noreferrer">Dromediansk</a></li>
+                </ContactLinks>
             </Container>
         </Layout>
     )

@@ -65,7 +65,7 @@ export default ({ data }) => {
     console.log(data)
     return (
         <Layout>
-            <SEO title="Home" />
+            <SEO title="Miroslav Pillar" />
             <div>
                 <h1>Miroslav's posts</h1>
                 <h4>There are currently{" "}{data.allMarkdownRemark.totalCount} of them.</h4>

@@ -7,6 +7,11 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 
+const Wrapper = styled.div`
+    position: relative;
+    min-height: 100vh;
+`
+
 const Container = styled.div`
     margin: 0 auto;
     padding-top: 0;
@@ -35,7 +40,7 @@ const Layout = ({ children }) => {
   `)
 
     return (
-        <>
+        <Wrapper>
             <Header siteTitle={data.site.siteMetadata.title} />
             <Container
                 style={{
@@ -48,7 +53,7 @@ const Layout = ({ children }) => {
                 <Main>{children}</Main>
             </Container>
             <Footer />
-        </>
+        </Wrapper>
     )
 }
 
