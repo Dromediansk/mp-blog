@@ -74,7 +74,7 @@ To sum things up, here are the five steps how you should approach to learn (not 
 2. _Regularity_ - code and learn new technologies at least 4-5 days a week
 3. _Creativity_ - build your own projects. Employers appreciate practical experience. I would be keen to invite someone on interview, who contributes in open-source projects.
 4. _Effectivity_ - don't solve excessively hard problems for many hours. Simplify things by dividing problems into smaller parts. Use google, because most likely someone had solved this problem before. And if not, ask!
-5. _Relax_ - try not to burn out. It's okay to have a break for few days and continue if you have apetite for coding again.
+5. _Relax_ - try to not burn out. It's okay to have a break for few days and continue if you have apetite for coding again.
 
 Thank you for reading and stay sharp!
 
