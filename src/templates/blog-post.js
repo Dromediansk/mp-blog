@@ -70,9 +70,13 @@ const SocialWrapper = styled.div`
         margin: 0;
     }
     svg {
-        width: 50px;
+        width: 40px;
         height: auto;
         margin: 0 1rem;
+        @media only screen and (max-width: 768px) {
+            margin: 0 0.4rem;
+            width: 30px;
+        }
     }
 `
 
@@ -115,7 +119,7 @@ export default ({ data, pageContext }) => {
                     <li>GitHub: <a href="https://github.com/Dromediansk" target="_blank" rel="noopener noreferrer">Dromediansk</a></li>
                 </ContactLinks>
                 <SocialWrapper>
-                    <h3>Share this post</h3>
+                    <h4>Share this post</h4>
                     <ul>
                         <li>
                             <a href={"https://www.facebook.com/sharer/sharer.php?u=" + baseUrl + pageContext.slug} target="_blank" rel="noopener noreferrer"><Fb /></a>
