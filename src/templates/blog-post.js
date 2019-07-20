@@ -22,10 +22,28 @@ const BlogPublish = styled.div`
     font-size: 0.8em;
 `
 
+const ImgBannerWrapper = styled.div`
+    max-height: 40vh;
+    overflow: hidden;
+    img {
+        position: relative;
+        bottom: 5rem;
+    }
+    @media only screen and (max-width: 768px) {
+            max-height: 20vh;
+            img {
+                position: static;
+            }
+        }
+`
+
 const Wrapper = styled.div`
     padding: 2rem 0;
     display: flex;
     align-items: center;
+    @media only screen and (max-width: 768px) {
+        padding: 0;
+    }
 `
 
 const Description = styled.p`
@@ -111,6 +129,9 @@ export default ({ data, pageContext }) => {
                     <span>Published: {post.frontmatter.date}</span>
                     <span>Author: {post.frontmatter.author}</span>
                 </BlogPublish>
+                <ImgBannerWrapper>
+                    <img src={post.frontmatter.imagePath.publicURL} alt="journey banner" />
+                </ImgBannerWrapper>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 <ContactLinks>
                     <p>Contact:</p>
@@ -144,6 +165,9 @@ export const query = graphql`
                 author
                 date
                 description
+                imagePath {
+                    publicURL
+                }
             }
         }
     }

@@ -5,8 +5,6 @@ import styled from 'styled-components'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import JourneyPhoto from '../images/journey.jpg'
-
 const BlogWrapper = styled.div`
     border: 2px solid #ddd;
     padding: 1rem 1.5rem;
@@ -76,7 +74,7 @@ export default ({ data }) => {
                                 <BlogTitle>{node.frontmatter.title}
                                 </BlogTitle>
                                 <ImageContainer>
-                                    <img src={JourneyPhoto} alt="journey" />
+                                    <img src={node.frontmatter.imagePath.publicURL} alt="journey" />
                                 </ImageContainer>
                             </TitleWrapper>
                             <p>{node.excerpt}</p>
@@ -101,6 +99,9 @@ query {
           title
           date
           description
+          imagePath {
+              publicURL
+          }
         }
         fields {
           slug
