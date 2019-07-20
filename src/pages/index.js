@@ -68,7 +68,7 @@ export default ({ data }) => {
             <SEO title="Miroslav Pillar" />
             <div>
                 <h1>Miroslav's posts</h1>
-                <h4>There are currently{" "}{data.allMarkdownRemark.totalCount} of them.</h4>
+                <h4>There is currently{" "}{data.allMarkdownRemark.totalCount} of them.</h4>
                 {data.allMarkdownRemark.edges.map(({ node }) => (
                     <BlogWrapper key={node.id}>
                         <BlogLink to={node.fields.slug}>
