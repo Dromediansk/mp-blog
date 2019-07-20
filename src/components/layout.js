@@ -4,7 +4,13 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
+
+const Wrapper = styled.div`
+    position: relative;
+    min-height: 100vh;
+`
 
 const Container = styled.div`
     margin: 0 auto;
@@ -12,20 +18,14 @@ const Container = styled.div`
 `
 
 const Main = styled.main`
-    padding: 3rem;
+    padding: 5rem;
     height: 100%;
-`
-
-const Footer = styled.footer`
-    background: #2c5364;
-    color: #ddd;
-    height: 6vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 2.2rem;
-    font-size: 0.8em;
+    a {
+        font-style: italic;
+    }
+    @media only screen and (max-width: 768px) {
+        padding: 2rem 1rem;
+  }
 `
 
 const Layout = ({ children }) => {
@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
   `)
 
     return (
-        <>
+        <Wrapper>
             <Header siteTitle={data.site.siteMetadata.title} />
             <Container
                 style={{
@@ -52,10 +52,8 @@ const Layout = ({ children }) => {
             >
                 <Main>{children}</Main>
             </Container>
-            <Footer>
-                © {new Date().getFullYear()}, Miroslav Pillar
-            </Footer>
-        </>
+            <Footer />
+        </Wrapper>
     )
 }
 

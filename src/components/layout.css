@@ -42,6 +42,7 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: inherit;
 }
 a:active,
 a:hover {
@@ -200,7 +201,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -385,6 +386,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  line-height: 33px;
 }
 figure {
   margin-left: 0;
@@ -434,14 +436,13 @@ fieldset {
   margin-bottom: 1.45rem;
 }
 blockquote {
-  margin-left: 1.45rem;
-  margin-right: 1.45rem;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin: 2.5rem auto;
+  padding: 1rem 2rem;
+  color: grey;
+  font-style: italic;
+  width: 80%;
+  background: #eee;
+  border-radius: 5px;
 }
 form {
   margin-left: 0;
@@ -513,9 +514,11 @@ li {
 }
 ol li {
   padding-left: 0;
+  line-height: 33px;
 }
 ul li {
   padding-left: 0;
+  line-height: 33px;
 }
 li > ol {
   margin-left: 1.45rem;
@@ -620,3 +623,25 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    blockquote {
+        width: 95%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2c5364;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: black;
+  }

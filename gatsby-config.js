@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: `Miroslav's blog`,
-        description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-        author: `@gatsbyjs`,
+        title: `MP Blog`,
+        description: `Blog section about web development, Javascript and React to bring to developers new inspiration and learn something new.`,
+        author: `Miroslav Pillar`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -20,22 +20,36 @@ module.exports = {
                 path: `${__dirname}/src/markdown-pages`,
             },
         },
-        `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [
+                    {
+                        resolve: "gatsby-remark-external-links",
+                        options: {
+                            target: "_blank",
+                            rel: "nofollow noopener noreferrer"
+                        }
+                    }
+                ]
+            }
+        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `gatsby-starter-default`,
-                short_name: `starter`,
+                name: `MP Blog`,
+                short_name: `MP Blog`,
                 start_url: `/`,
-                background_color: `#663399`,
-                theme_color: `#663399`,
-                display: `minimal-ui`,
-                icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+                background_color: `#2c5364`,
+                theme_color: `#2c5364`,
+                display: `standalone`,
+                icon: `src/images/favicon.png`, // This path is relative to the root of the site.
             },
         },
+        `gatsby-plugin-offline`,
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,
