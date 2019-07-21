@@ -55,7 +55,7 @@ After finishing the course I enrolled to another from the same teacher [The Comp
 > "Wether you think you can or you think you can't, you're right."
 > – Henry Ford
 
-In the meantime of learning from videos and building staff, you should start to apply for a job. I had a few interviews I didn't succeed, but as time passed by, I realized these interviews and technical questions gave me irreplaceable experience, so I knew where I had patchy knowledge. So don't be discouraged if they say no, but benefit from the experience.
+In the meantime of learning from videos and building staff, you should start to apply for a job. I had a few interviews I didn't succeed, but as time passed by, I realized these interviews and technical questions gave me irreplaceable experience, so I knew where I had shortcomings. So don't be discouraged if they say no, but benefit from the experience.
 
 In my case, after three rounds of technical interview on one job position I have finally succeeded.
 
