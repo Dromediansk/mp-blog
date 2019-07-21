@@ -3,7 +3,7 @@ title: "Guide to web development or how to approach learning without computer sc
 author: "Miroslav Pillar"
 date: "20. July 2019"
 description: "I wanted to become a full-time developer, so I set a goal to get a job within one year. In fact, I've got hired after 7 months."
-imagePath: "../images/journey.jpg"
+imageBanner: "../images/journey.jpg"
 ---
 
 ***

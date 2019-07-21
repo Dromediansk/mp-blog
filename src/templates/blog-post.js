@@ -3,10 +3,10 @@ import { graphql } from "gatsby"
 import Layout from '../components/layout'
 import styled from 'styled-components'
 
-import AvatarPhoto from '../images/avatar.jpg'
 import { FacebookSquare } from 'styled-icons/boxicons-logos/FacebookSquare'
 import { LinkedinSquare } from 'styled-icons/boxicons-logos/LinkedinSquare'
 import { Twitter } from 'styled-icons/boxicons-logos/Twitter'
+import Avatar from '../components/image'
 
 const Container = styled.div`
     p {
@@ -39,25 +39,20 @@ const ImgBannerWrapper = styled.div`
 
 const Wrapper = styled.div`
     padding: 2rem 0;
+    margin: auto 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     @media only screen and (max-width: 768px) {
-        padding: 0;
+        padding: 1.5rem 0;
     }
 `
 
 const Description = styled.p`
     color: grey;
-    padding: 1rem;
     font-style: italic;
-`
-
-const Avatar = styled.div`
-    width: 200px;
-    img {
-        border-radius: 50%;
-        border: 2px double black;
-    }
+    padding: 0 2rem;
+    margin: 0;
 `
 
 const ContactLinks = styled.ul`
@@ -117,9 +112,9 @@ export default ({ data, pageContext }) => {
             <Container>
                 <h1>{post.frontmatter.title}</h1>
                 <Wrapper>
-                    <Avatar>
-                        <img src={AvatarPhoto} alt="avatar" />
-                    </Avatar>
+                    <div>
+                        <Avatar />
+                    </div>
                     <Description>{post.frontmatter.description}</Description>
                 </Wrapper>
                 <BlogPublish>
@@ -127,7 +122,7 @@ export default ({ data, pageContext }) => {
                     <span>Author: {post.frontmatter.author}</span>
                 </BlogPublish>
                 <ImgBannerWrapper>
-                    <img src={post.frontmatter.imagePath.publicURL} alt="banner" />
+                    <img src={post.frontmatter.imageBanner.publicURL} alt="banner" />
                 </ImgBannerWrapper>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 <ContactLinks>
@@ -162,14 +157,14 @@ export default ({ data, pageContext }) => {
 
 export const query = graphql`
     query($slug: String!) {
-        markdownRemark( fields: { slug: { eq: $slug }}) {
-            html
+                markdownRemark(fields: {slug: {eq: $slug }}) {
+                html
             frontmatter {
                 title
                 author
                 date
                 description
-                imagePath {
+                imageBanner {
                     publicURL
                 }
             }
