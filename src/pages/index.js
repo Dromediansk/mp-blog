@@ -63,7 +63,7 @@ export default ({ data }) => {
     console.log(data)
     return (
         <Layout>
-            <SEO title="Miroslav Pillar" />
+            <SEO />
             <div>
                 <h1>Miroslav's posts</h1>
                 <h4>There is currently{" "}{data.allMarkdownRemark.totalCount} of them.</h4>
@@ -74,7 +74,7 @@ export default ({ data }) => {
                                 <BlogTitle>{node.frontmatter.title}
                                 </BlogTitle>
                                 <ImageContainer>
-                                    <img src={node.frontmatter.imagePath.publicURL} alt="journey" />
+                                    <img src={node.frontmatter.imageBanner.publicURL} alt="journey" />
                                 </ImageContainer>
                             </TitleWrapper>
                             <p>{node.excerpt}</p>
@@ -97,9 +97,9 @@ query {
         excerpt
         frontmatter {
           title
-          date
+          date(formatString: "MMMM DD, YYYY")
           description
-          imagePath {
+          imageBanner {
               publicURL
           }
         }
