@@ -3,6 +3,7 @@ module.exports = {
         title: `MP Blog`,
         description: `Blog section about web development, Javascript and React to bring to developers new inspiration and learn something new.`,
         author: `Miroslav Pillar`,
+        siteUrl: 'https://blog.miroslavpillar.com/'
     },
     plugins: [
         `gatsby-plugin-react-helmet`,

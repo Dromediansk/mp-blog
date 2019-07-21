@@ -74,7 +74,7 @@ export default ({ data }) => {
                                 <BlogTitle>{node.frontmatter.title}
                                 </BlogTitle>
                                 <ImageContainer>
-                                    <img src={node.frontmatter.imagePath.publicURL} alt="journey" />
+                                    <img src={node.frontmatter.image.childImageSharp.fixed.src} alt="journey" />
                                 </ImageContainer>
                             </TitleWrapper>
                             <p>{node.excerpt}</p>
@@ -99,9 +99,13 @@ query {
           title
           date
           description
-          imagePath {
-              publicURL
-          }
+          image {
+            childImageSharp {
+                fixed {
+                    src
+                }
+            }
+        }
         }
         fields {
           slug
