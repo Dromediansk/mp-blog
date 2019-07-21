@@ -112,7 +112,12 @@ export default ({ data, pageContext }) => {
     const imageBannerPath = imageBanner && imageBanner.childImageSharp.fixed.src
     return (
         <Layout>
-            <SEO image={imageBannerPath} />
+            {console.log("slug", pageContext.slug)}
+            <SEO
+                image={imageBannerPath}
+                description={post.frontmatter.description}
+                pathname={pageContext.slug}
+            />
             <Container>
                 <h1>{post.frontmatter.title}</h1>
                 <Wrapper>
