@@ -2,11 +2,11 @@ import React from 'react'
 import { graphql } from "gatsby"
 import Layout from '../components/layout'
 import styled from 'styled-components'
-import { DiscussionEmbed } from 'disqus-react'
 
 import AvatarPhoto from '../images/avatar.jpg'
 import { FacebookSquare } from 'styled-icons/boxicons-logos/FacebookSquare'
 import { LinkedinSquare } from 'styled-icons/boxicons-logos/LinkedinSquare'
+import { Twitter } from 'styled-icons/boxicons-logos/Twitter'
 
 const Container = styled.div`
     p {
@@ -104,17 +104,14 @@ const Fb = styled(FacebookSquare)`
 const Linkedin = styled(LinkedinSquare)`
     fill: #0077B5;
 `
+const TwitterIcon = styled(Twitter)`
+    fill: #1da1f2;
+`
 
 
 export default ({ data, pageContext }) => {
     const post = data.markdownRemark;
     const baseUrl = 'https://blog.miroslavpillar.com';
-    const disqusShortname = 'blog-miroslavpillar-com'
-    const disqusConfig = {
-        identifier: data.markdownRemark.id,
-        title: post.title,
-        url: baseUrl + pageContext.slug
-    }
     return (
         <Layout>
             <Container>
@@ -146,11 +143,18 @@ export default ({ data, pageContext }) => {
                             <a href={"https://www.facebook.com/sharer/sharer.php?u=" + baseUrl + pageContext.slug} target="_blank" rel="noopener noreferrer"><Fb /></a>
                         </li>
                         <li>
-                            <a href={"https://www.linkedin.com/shareArticle?url=" + baseUrl + pageContext.slug} target="_blank" rel="noopener noreferrer"><Linkedin /></a>
+                            <a href={"https://www.linkedin.com/shareArticle?mini=true&url=" + baseUrl + pageContext.slug} target="_blank" rel="noopener noreferrer"><Linkedin /></a>
+                        </li>
+                        <li>
+                            <a href={'https://twitter.com/share?url='
+                                + baseUrl + pageContext.slug +
+                                '&text=' +
+                                post.frontmatter.title + '&via' +
+                                'twitterHandle'}
+                                target="_blank" rel="noopener noreferrer"><TwitterIcon /></a>
                         </li>
                     </ul>
                 </SocialWrapper>
-                <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} showMedia={false} />
             </Container>
         </Layout>
     )
