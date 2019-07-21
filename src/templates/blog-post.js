@@ -130,7 +130,7 @@ export default ({ data, pageContext }) => {
                     <span>Author: {post.frontmatter.author}</span>
                 </BlogPublish>
                 <ImgBannerWrapper>
-                    <img src={post.frontmatter.imagePath.publicURL} alt="journey banner" />
+                    <img src={post.frontmatter.imagePath.publicURL} alt="banner" />
                 </ImgBannerWrapper>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 <ContactLinks>

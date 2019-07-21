@@ -52,6 +52,9 @@ To summarize the point, try to put yourself in employer's shoes. If you would se
 
 After finishing the course I enrolled to another from the same teacher [The Complete Junior to Senior Web Developer Roadmap](https://www.udemy.com/course/the-complete-junior-to-senior-web-developer-roadmap/), which totally opened my eyes to the ecosystem. You will enhance your skills especially in terms of perfomance, security and [devops](https://en.wikipedia.org/wiki/DevOps).
 
+> "Wether you think you can or you think you can't, you're right."
+> – Henry Ford
+
 In the meantime of learning from videos and building staff, you should start to apply for a job. I had a few interviews I didn't succeed, but as time passed by, I realized these interviews and technical questions gave me irreplaceable experience, so I knew where I had patchy knowledge. So don't be discouraged if they say no, but benefit from the experience.
 
 In my case, after three rounds of technical interview on one job position I have finally succeeded.
