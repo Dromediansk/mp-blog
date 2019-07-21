@@ -114,6 +114,7 @@ export default ({ data, pageContext }) => {
         <Layout>
             {console.log("slug", pageContext.slug)}
             <SEO
+                title={post.frontmatter.title}
                 image={imageBannerPath}
                 description={post.frontmatter.description}
                 pathname={pageContext.slug}
