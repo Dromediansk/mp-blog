@@ -7,6 +7,7 @@ import { FacebookSquare } from 'styled-icons/boxicons-logos/FacebookSquare'
 import { LinkedinSquare } from 'styled-icons/boxicons-logos/LinkedinSquare'
 import { Twitter } from 'styled-icons/boxicons-logos/Twitter'
 import Avatar from '../components/image'
+import SEO from '../components/seo';
 
 const Container = styled.div`
     p {
@@ -107,8 +108,11 @@ const TwitterIcon = styled(Twitter)`
 export default ({ data, pageContext }) => {
     const post = data.markdownRemark;
     const baseUrl = 'https://blog.miroslavpillar.com';
+    const { imageBanner } = post.frontmatter;
+    const imageBannerPath = imageBanner && imageBanner.childImageSharp.fixed.src
     return (
         <Layout>
+            <SEO image={imageBannerPath} />
             <Container>
                 <h1>{post.frontmatter.title}</h1>
                 <Wrapper>
@@ -122,7 +126,7 @@ export default ({ data, pageContext }) => {
                     <span>Author: {post.frontmatter.author}</span>
                 </BlogPublish>
                 <ImgBannerWrapper>
-                    <img src={post.frontmatter.imageBanner.publicURL} alt="banner" />
+                    <img src={imageBannerPath} alt="banner" />
                 </ImgBannerWrapper>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 <ContactLinks>
@@ -162,10 +166,14 @@ export const query = graphql`
             frontmatter {
                 title
                 author
-                date
+                date(formatString: "MMMM DD, YYYY")
                 description
                 imageBanner {
-                    publicURL
+                    childImageSharp {
+                        fixed(width: 800, height: 350) {
+                            src
+                        }
+                    }
                 }
             }
         }

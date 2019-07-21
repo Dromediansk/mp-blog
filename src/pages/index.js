@@ -63,7 +63,7 @@ export default ({ data }) => {
     console.log(data)
     return (
         <Layout>
-            <SEO title="Miroslav Pillar" />
+            <SEO />
             <div>
                 <h1>Miroslav's posts</h1>
                 <h4>There is currently{" "}{data.allMarkdownRemark.totalCount} of them.</h4>
@@ -97,7 +97,7 @@ query {
         excerpt
         frontmatter {
           title
-          date
+          date(formatString: "MMMM DD, YYYY")
           description
           imageBanner {
               publicURL
