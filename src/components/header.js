@@ -6,7 +6,9 @@ import styled from 'styled-components'
 import Logo from '../images/Logo-portfolio.png'
 
 const HeaderBanner = styled.header`
-    position: relative;
+    position: fixed;
+    width: 100%;
+    height: 12vh;
     background: #2c5364;
     padding: 0 1rem;
     display: flex;
@@ -14,6 +16,7 @@ const HeaderBanner = styled.header`
     -webkit-box-shadow: 0px 5px 23px 15px rgba(169,169,169,1);
     -moz-box-shadow: 0px 5px 23px 15px rgba(169,169,169,1);
     box-shadow: 0px 5px 23px 15px rgba(169,169,169,1);
+    z-index: 10;
 `
 
 const LogoStyled = styled.img`

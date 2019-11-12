@@ -14,7 +14,13 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
     margin: 0 auto;
-    padding-top: 0;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 960px;
+    @media only screen and (max-width: 768px) {
+        padding-top: 4rem;
+  }
 `
 
 const Main = styled.main`
@@ -29,7 +35,7 @@ const Main = styled.main`
 `
 
 const Layout = ({ children }) => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -39,26 +45,19 @@ const Layout = ({ children }) => {
     }
   `)
 
-    return (
-        <Wrapper>
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <Container
-                style={{
-                    margin: `0 auto`,
-                    maxWidth: 960,
-                    padding: `0px 1.0875rem 0`,
-                    paddingTop: 0,
-                }}
-            >
-                <Main>{children}</Main>
-            </Container>
-            <Footer />
-        </Wrapper>
-    )
+  return (
+    <Wrapper>
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <Container>
+        <Main>{children}</Main>
+      </Container>
+      <Footer />
+    </Wrapper>
+  )
 }
 
 Layout.propTypes = {
-    children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout

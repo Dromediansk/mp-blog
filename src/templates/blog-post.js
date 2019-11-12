@@ -1,19 +1,13 @@
-import React from 'react'
+import React from "react"
 import { graphql } from "gatsby"
-import Layout from '../components/layout'
-import styled from 'styled-components'
+import Layout from "../components/layout"
+import styled from "styled-components"
 
-import { FacebookSquare } from 'styled-icons/boxicons-logos/FacebookSquare'
-import { LinkedinSquare } from 'styled-icons/boxicons-logos/LinkedinSquare'
-import { Twitter } from 'styled-icons/boxicons-logos/Twitter'
-import Avatar from '../components/image'
-import SEO from '../components/seo';
-
-const Container = styled.div`
-    p {
-        text-align: justify;
-    }
-`
+import { FacebookSquare } from "styled-icons/boxicons-logos/FacebookSquare"
+import { LinkedinSquare } from "styled-icons/boxicons-logos/LinkedinSquare"
+import { Twitter } from "styled-icons/boxicons-logos/Twitter"
+import Avatar from "../components/image"
+import SEO from "../components/seo"
 
 const BlogPublish = styled.div`
     display: flex;
@@ -24,26 +18,27 @@ const BlogPublish = styled.div`
 `
 
 const ImgBannerWrapper = styled.div`
-    max-height: 40vh;
+    max-height: 60vh;
     overflow: hidden;
-    img {
-        position: relative;
-        bottom: 5rem;
-    }
-    @media only screen and (max-width: 768px) {
-            max-height: 20vh;
-            img {
-                position: static;
-            }
-        }
+    text-align: center;
 `
 
-const Wrapper = styled.div`
+const Helper = styled.span`
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    img {
+        vertical-align: middle;
+        max-height: 60vh;
+    }
+`
+
+const DescriptionWrapper = styled.div`
     padding: 2rem 0;
     margin: auto 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     @media only screen and (max-width: 768px) {
         padding: 1.5rem 0;
     }
@@ -95,80 +90,136 @@ const SocialWrapper = styled.div`
 `
 
 const Fb = styled(FacebookSquare)`
-    fill: #3C5A99;
+    fill: #3c5a99;
 `
 const Linkedin = styled(LinkedinSquare)`
-    fill: #0077B5;
+    fill: #0077b5;
 `
 const TwitterIcon = styled(Twitter)`
     fill: #1da1f2;
 `
 
-
 export default ({ data, pageContext }) => {
-    const post = data.markdownRemark;
-    const baseUrl = 'https://blog.miroslavpillar.com';
-    const { imageBanner } = post.frontmatter;
+    const post = data.markdownRemark
+    const baseUrl = "https://blog.miroslavpillar.com"
+    const { imageBanner } = post.frontmatter
     const imageBannerPath = imageBanner && imageBanner.childImageSharp.fixed.src
     return (
         <Layout>
-            {console.log("slug", pageContext.slug)}
             <SEO
                 title={post.frontmatter.title}
                 image={imageBannerPath}
                 description={post.frontmatter.description}
                 pathname={pageContext.slug}
             />
-            <Container>
+            <div>
                 <h1>{post.frontmatter.title}</h1>
-                <Wrapper>
+                <DescriptionWrapper>
                     <div>
                         <Avatar />
                     </div>
                     <Description>{post.frontmatter.description}</Description>
-                </Wrapper>
+                </DescriptionWrapper>
                 <BlogPublish>
                     <span>Published: {post.frontmatter.date}</span>
                     <span>Author: {post.frontmatter.author}</span>
                 </BlogPublish>
                 <ImgBannerWrapper>
-                    <img src={imageBannerPath} alt="banner" />
+                    <Helper>
+                        <img src={imageBannerPath} alt="banner" />
+                    </Helper>
                 </ImgBannerWrapper>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 <ContactLinks>
                     <p>Contact:</p>
-                    <li>Website: <a href="https://www.miroslavpillar.com" target="_blank" rel="noopener noreferrer">www.miroslavpillar.com</a></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/miroslavpillar/" target="_blank" rel="noopener noreferrer">Miroslav Pillar</a></li>
-                    <li>GitHub: <a href="https://github.com/Dromediansk" target="_blank" rel="noopener noreferrer">Dromediansk</a></li>
+                    <li>
+                        Website:{" "}
+                        <a
+                            href="https://www.miroslavpillar.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            www.miroslavpillar.com
+                        </a>
+                    </li>
+                    <li>
+                        LinkedIn profile:{" "}
+                        <a
+                            href="https://www.linkedin.com/in/miroslavpillar/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Miroslav Pillar
+                        </a>
+                    </li>
+                    <li>
+                        GitHub profile:{" "}
+                        <a
+                            href="https://github.com/Dromediansk"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Dromediansk
+                        </a>
+                    </li>
                 </ContactLinks>
                 <SocialWrapper>
                     <h4>Share this post</h4>
                     <ul>
                         <li>
-                            <a href={"https://www.facebook.com/sharer/sharer.php?u=" + baseUrl + pageContext.slug} target="_blank" rel="noopener noreferrer"><Fb /></a>
+                            <a
+                                href={
+                                    "https://www.facebook.com/sharer/sharer.php?u=" +
+                                    baseUrl +
+                                    pageContext.slug
+                                }
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Fb />
+                            </a>
                         </li>
                         <li>
-                            <a href={"https://www.linkedin.com/shareArticle?mini=true&url=" + baseUrl + pageContext.slug} target="_blank" rel="noopener noreferrer"><Linkedin /></a>
+                            <a
+                                href={
+                                    "https://www.linkedin.com/shareArticle?mini=true&url=" +
+                                    baseUrl +
+                                    pageContext.slug
+                                }
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Linkedin />
+                            </a>
                         </li>
                         <li>
-                            <a href={'https://twitter.com/share?url='
-                                + baseUrl + pageContext.slug +
-                                '&text=' +
-                                post.frontmatter.title + '&via' +
-                                'twitterHandle'}
-                                target="_blank" rel="noopener noreferrer"><TwitterIcon /></a>
+                            <a
+                                href={
+                                    "https://twitter.com/share?url=" +
+                                    baseUrl +
+                                    pageContext.slug +
+                                    "&text=" +
+                                    post.frontmatter.title +
+                                    "&via" +
+                                    "twitterHandle"
+                                }
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <TwitterIcon />
+                            </a>
                         </li>
                     </ul>
                 </SocialWrapper>
-            </Container>
+            </div>
         </Layout>
     )
 }
 
 export const query = graphql`
     query($slug: String!) {
-                markdownRemark(fields: {slug: {eq: $slug }}) {
-                html
+        markdownRemark(fields: { slug: { eq: $slug } }) {
+            html
             frontmatter {
                 title
                 author
