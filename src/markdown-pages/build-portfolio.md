@@ -1,5 +1,5 @@
 ---
-title: "Engage visitors by building professional-looking webpage with these 4 principles"
+title: "Engage potential customers by building professional-looking website with these 4 principles"
 author: "Miroslav Pillar"
 date: "2019-11-16"
 description: "Handy tips how to build professional webpage and not blend with the crowd."

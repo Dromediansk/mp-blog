@@ -61,6 +61,10 @@ const BlogTitle = styled.h3`
   }
 `
 
+const NumberOfArticles = styled.h4`
+  color: grey;
+`
+
 const BlogDate = styled.div`
   color: grey;
   font-family: "Segoe UI";
@@ -73,9 +77,9 @@ export default ({ data }) => {
       <SEO />
       <div>
         <h1>Miroslav's posts</h1>
-        <h4>
-          There are currently {data.allMarkdownRemark.totalCount} of them.
-        </h4>
+        <NumberOfArticles>
+          Number of published articles: {data.allMarkdownRemark.totalCount}
+        </NumberOfArticles>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <BlogWrapper key={node.id}>
             <BlogLink to={node.fields.slug}>

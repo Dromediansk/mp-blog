@@ -58,8 +58,8 @@ SEO.propTypes = {
 }
 
 SEO.defaultProps = {
-    title: null,
-    description: null,
+    title: 'Miroslav Pillar\'s Blog',
+    description: 'Articles about web development - techniques, tips and handy sources',
     image: null,
     pathname: null,
     article: false,

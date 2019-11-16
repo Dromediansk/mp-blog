@@ -52,11 +52,24 @@ const Description = styled.p`
     margin: 0;
 `
 
-const ContactLinks = styled.ul`
-    padding: 1rem;
+const EndContainer = styled.div`
+    display: flex;
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+`
+
+const ContactLinks = styled.div`
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    flex: 50%;
     background: #eee;
-    border-radius: 10px;
+    border-radius: 5px;
     font-style: italic;
+    @media only screen and (max-width: 768px) {
+        flex: 100%;
+        margin: 0.5rem;
+    }
     p {
         margin-bottom: 0.5rem;
     }
@@ -69,11 +82,15 @@ const ContactLinks = styled.ul`
 
 const SocialWrapper = styled.div`
     background: #eee;
-    padding: 1rem 0;
-    width: 50%;
-    margin: 1rem auto;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    flex: 50%;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
+     @media only screen and (max-width: 768px) {
+        flex: 100%;
+        margin: 0.5rem;
+    }
     ul {
         list-style-type: none;
         display: inline-flex;
@@ -131,87 +148,88 @@ export default ({ data, pageContext }) => {
                     </Helper>
                 </ImgBannerWrapper>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                <ContactLinks>
-                    <p>Contact:</p>
-                    <li>
-                        Website:{" "}
-                        <a
-                            href="https://www.miroslavpillar.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            www.miroslavpillar.com
-                        </a>
-                    </li>
-                    <li>
-                        LinkedIn profile:{" "}
-                        <a
-                            href="https://www.linkedin.com/in/miroslavpillar/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Miroslav Pillar
-                        </a>
-                    </li>
-                    <li>
-                        GitHub profile:{" "}
-                        <a
-                            href="https://github.com/Dromediansk"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Dromediansk
-                        </a>
-                    </li>
-                </ContactLinks>
-                <SocialWrapper>
-                    <h4>Share this post</h4>
-                    <ul>
+                <EndContainer>
+                    <ContactLinks>
                         <li>
+                            Website:{" "}
                             <a
-                                href={
-                                    "https://www.facebook.com/sharer/sharer.php?u=" +
-                                    baseUrl +
-                                    pageContext.slug
-                                }
+                                href="https://www.miroslavpillar.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Fb />
-                            </a>
+                                www.miroslavpillar.com
+                        </a>
                         </li>
                         <li>
+                            LinkedIn:{" "}
                             <a
-                                href={
-                                    "https://www.linkedin.com/shareArticle?mini=true&url=" +
-                                    baseUrl +
-                                    pageContext.slug
-                                }
+                                href="https://www.linkedin.com/in/miroslavpillar/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Linkedin />
-                            </a>
+                                Miroslav Pillar
+                        </a>
                         </li>
                         <li>
+                            GitHub:{" "}
                             <a
-                                href={
-                                    "https://twitter.com/share?url=" +
-                                    baseUrl +
-                                    pageContext.slug +
-                                    "&text=" +
-                                    post.frontmatter.title +
-                                    "&via" +
-                                    "twitterHandle"
-                                }
+                                href="https://github.com/Dromediansk"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <TwitterIcon />
-                            </a>
+                                Dromediansk
+                        </a>
                         </li>
-                    </ul>
-                </SocialWrapper>
+                    </ContactLinks>
+                    <SocialWrapper>
+                        <h4>Share this article</h4>
+                        <ul>
+                            <li>
+                                <a
+                                    href={
+                                        "https://www.facebook.com/sharer/sharer.php?u=" +
+                                        baseUrl +
+                                        pageContext.slug
+                                    }
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Fb />
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href={
+                                        "https://www.linkedin.com/shareArticle?mini=true&url=" +
+                                        baseUrl +
+                                        pageContext.slug
+                                    }
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Linkedin />
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href={
+                                        "https://twitter.com/share?url=" +
+                                        baseUrl +
+                                        pageContext.slug +
+                                        "&text=" +
+                                        post.frontmatter.title +
+                                        "&via" +
+                                        "twitterHandle"
+                                    }
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <TwitterIcon />
+                                </a>
+                            </li>
+                        </ul>
+                    </SocialWrapper>
+                </EndContainer>
             </div>
         </Layout>
     )
