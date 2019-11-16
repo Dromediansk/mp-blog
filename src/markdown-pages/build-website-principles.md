@@ -10,19 +10,21 @@ imageBanner: "../images/portfolio1.jpg"
 
 Truth is that building a website has never been easier than it is today. You need to know basics of HTML and CSS and that's it. The bigger challenge though, is to create modern professional-looking site, which attract attention on glimpse, has high-quality content and is accessible for search engines or any mobile device. If you want that to accomplish, you're on the right place. 
 
-_First things first - who am I?_<br>
+_**First things first - who am I?**_<br>
 I`d like to shortly introduce myself so you have basic overview about me as an author of this article:
 
 I am full-time Javascript software developer in a German consulting company, which brings modern solutions (mostly in banking sector) in terms of software development. Altough I don't have a computer science degree I am self-taught developer willing to always learn. Feel free to visit my website [miroslavpillar.com](https://miroslavpillar.com/) to read about my motivation and recent projects. You can also jump into [article, how to learn web development without science degree](https://blog.miroslavpillar.com/web-development-guide/), which is based on true story.
+
+> “Website without visitors is like a ship lost in the horizon.”
+> – Dr. Christopher Dayagdag
 
 I would divide quality of the page into 4 main principles you should observe: _meaningful content, design, technology_ and _accessibility_.
 
 ### 1.principle - Meaningful content
 
-If you want to demonstrate your _product_ with modern good-looking website, you must dive into it more deeper. By term product I mean simply anything you are trying to show or promote in your webpage - it could be your services, goods, personal portfolio, life journey etc.
+If you want to demonstrate your _product_ with modern good-looking website, you must dive into its purpose more deeper. By term product I simply mean anything you are trying to show or promote in your webpage - it could be your services, goods, personal portfolio, life journey etc.
 
 When making content try to ask yourself these questions:
-
 - _Who are your [stakeholders](https://www.investopedia.com/terms/s/stakeholder.asp)?_ 
 - _Who are your potential visitors? Head hunters? Clients? Or general public?_
 - _What are you trying to sell? Your best projects? Your products or services? Or your life journey?_
@@ -31,12 +33,20 @@ Feel free to take your time and clarify answers on these questions. Don't hesita
 
 ### 2.principle - Design
 
-The one of the requirements for building high-quality site is to have right sources - to obtain assets, design ideas and inspiration. Let me break it to smaller pieces.
+There is one term that is frequently used in web development and that is _responsive web design_, which I consider to be very important for having high-quality website. It basically means it is accessible and fully adapted to devices with all kinds of display resolutions such as mobile, tablet or computer. You can accomplish that by implementing [media queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/) in your CSS styling.
+
+> "If you think responsive's simple, I feel bad for you son. We got 99 viewports, but the iPhone's just one."
+> – Josh Brewer
+
+Another requirement for building high-quality site is to have right sources - to obtain assets, design ideas and inspiration. Let me break it to smaller pieces:
 
 - It is necessary to have appropriate _**color theme**_. You can explore and choose one [in this color palette from Adobe](https://color.adobe.com/explore). Be aware of sufficient contrast between background and texts to keep principles of accessibility. But more about that later in this article.
 - If you don't have artistic _**images**_ in your storage, you could use illustrations from [Freellustrations](https://freellustrations.com/), [Iconscout](https://iconscout.com/paper-illustrations) or [Delesign](https://delesign.com/free-designs/graphics/). If you want to use high-resolution photos I recommend searching in [Unsplash](https://unsplash.com/), [Pexels](https://www.pexels.com/) or [Pixabay](https://thenextscoop.com/websites-download-free-quality-images/), which are free of use.
 - _**Animations**_. Trust me, people glad to visit fluid and nice-looking pages (with good content, of course). They shouldn't be excessive or too many, so if you are beginner in this field, make them simple and lightweight. The less is sometimes more. You can code them in pure CSS or use one of the animation libraries - e.g. [Animate.css](https://daneden.github.io/animate.css/).
 - You don't have to reinvent the wheel, therefore there is one more - and much simplier option using _**templates**_, which help to create website in just few hours. You can use [Startbootstrap](https://startbootstrap.com/themes/) or [Creative Tim](https://www.creative-tim.com/), but on the other hand it has its downside - you will not experience mysterious behaviours of CSS.
+
+> “Design is not just what it looks like and feels like. Design is how it works.” 
+> – Steve Jobs
 
 ### 3.principle - Technology & tools
 
@@ -82,6 +92,9 @@ _**Tabindex**_ improves _keyboard accessibility_. Put simply: for a website to b
 
 _**How to actually test keyboard accessibility?**_ <br>
 Simply use your webpage without a mouse. If you find that you can’t access certain elements or that navigating is difficult, you can pinpoint those issues and address them. To help you out with this, WebAIM provides a handy [guide for keyboard accessibility design](https://webaim.org/techniques/keyboard/).
+
+> “If you think good design is expensive, you should look at the cost of bad design.” 
+> – Ralf Speth
 
 I believe these 4 principles are key to have better more-accessible website, which would be easy to maintain and also would bring you greater success in your journey.
 
