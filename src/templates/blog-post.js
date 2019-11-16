@@ -18,7 +18,7 @@ const BlogPublish = styled.div`
 `
 
 const ImgBannerWrapper = styled.div`
-    max-height: 60vh;
+    max-height: 70vh;
     overflow: hidden;
     text-align: center;
 `
@@ -30,6 +30,7 @@ const Helper = styled.span`
     img {
         vertical-align: middle;
         max-height: 60vh;
+        margin-bottom: 0;
     }
 `
 

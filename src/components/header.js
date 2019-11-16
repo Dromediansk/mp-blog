@@ -8,7 +8,7 @@ import Logo from '../images/Logo-portfolio.png'
 const HeaderBanner = styled.header`
     position: fixed;
     width: 100%;
-    height: 12vh;
+    height: 10vh;
     background: #2c5364;
     padding: 0 1rem;
     display: flex;
