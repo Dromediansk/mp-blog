@@ -57,9 +57,11 @@ Another requirement for building high-quality site is to have right sources - to
 
 ### 3. Technology & tools
 
-By choosing the most suitable technologies in the beginning, you can facilitate development and maintainability in the future. There isn't only one right programming language or library to choose tough. It also depends on your own knowledge and desire to learn.
+By choosing the most suitable technologies in the beginning, you can facilitate development and maintainability in the future. In terms of technology choice, there are many options you can pick. It depends on your own knowledge and desire to learn. For websites, it's pretty natural to go with Javascript, but the main question is - with which framework (or library)?
 
-Besides choosing right Javascript library or framework (React, Angular, Vue, etc.) you should also consider styling library. My most favourite are [Styled components](https://www.styled-components.com/), [Material UI for React](https://material-ui.com/) and [React-Bootstrap](https://react-bootstrap.github.io/).
+The most popular choices are React, Angular or Vue. There is always a question which is the best one. You'll get various opinions over each framework and you will never find out what is the truth. I would ask the question differently: _Which is the most suitable for your project?_ A good developer should know to decide, which tech is most relevant for a project. It depends on various factors: content, functionality, scale, skills of your team, etc. Regarding this topic I recommend reading [React vs Angular vs Vue from Andrei Neagoie](https://medium.com/zerotomastery/tech-trends-showdown-react-vs-angular-vs-vue-61ffaf1d8706).
+
+You should also consider styling library, which makes development easier by providing whole components, therefore you don't waste your precious time by designing a simple button. My most favourite are [Styled components](https://www.styled-components.com/), [Material UI](https://material-ui.com/) and [Bootstrap](https://getbootstrap.com/).
 
 In terms of using CSS you can try preprocessors like Sass or Less, which are more powerful than traditional CSS. For learning basic principles you can watch [this crash course about SASS](https://www.youtube.com/watch?v=roywYSEPSvc&t=1577s). Good knowledge of CSS and preprocessors is also one of the most demanding skills of frontend developer.
 
