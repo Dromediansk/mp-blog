@@ -640,7 +640,7 @@ pre tt:after {
     background: #ddd;
   }
   ::-webkit-scrollbar-thumb {
-    background: #2c5364;
+    background: grey;
   }
   ::-webkit-scrollbar-thumb:hover {
     background: black;
