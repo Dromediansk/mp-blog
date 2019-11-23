@@ -45,7 +45,12 @@ const ImageContainer = styled.div`
     overflow: hidden;
   }
   @media only screen and (max-width: 768px) {
-    width: 10rem;
+    width: 15rem;
+    height: 8rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 `
 
