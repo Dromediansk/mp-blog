@@ -1,7 +1,7 @@
 ---
 title: "Engage potential customers by building professional-looking website with these 4 principles"
 author: "Miroslav Pillar"
-date: "2019-11-23"
+date: "2019-11-24"
 description: "Handy tips how to build professional webpage and not blend with the crowd."
 imageBanner: "../images/prof_website.jpg"
 ---

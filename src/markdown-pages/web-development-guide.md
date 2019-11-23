@@ -1,7 +1,7 @@
 ---
 title: "Guide to web development or how to approach learning without computer science degree"
 author: "Miroslav Pillar"
-date: "2019-07-21"
+date: "2019-11-23"
 description: "I wanted to become a full-time developer, so I set a goal to get a job within one year. In fact, I've got hired after 7 months."
 imageBanner: "../images/journey.jpg"
 ---
