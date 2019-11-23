@@ -116,6 +116,10 @@ export const query = graphql`
             imageBanner {
               publicURL
             }
+            imageBannerAuthor
+            imageBannerAuthorLink
+            imageBannerSource
+            imageBannerSourceLink
           }
           fields {
             slug

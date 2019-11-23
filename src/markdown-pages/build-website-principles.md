@@ -4,8 +4,11 @@ author: "Miroslav Pillar"
 date: "2019-11-24"
 description: "Handy tips how to build professional webpage and not blend with the crowd."
 imageBanner: "../images/prof_website.jpg"
+imageBannerAuthor: "Igor Miske"
+imageBannerAuthorLink: "https://unsplash.com/@igormiske"
+imageBannerSource: "Unsplash"
+imageBannerSourceLink: "https://unsplash.com/"
 ---
-<span style="color:grey; font-size: 15px; display: block; text-align: center;">Photo by [Igor Miske](https://unsplash.com/@igormiske) on [Unsplash](https://unsplash.com/)</span>
 &NewLine;
 
 Truth is that building a website has never been easier than it is today. You need to know basics of HTML and CSS and that's it - you have basic website!

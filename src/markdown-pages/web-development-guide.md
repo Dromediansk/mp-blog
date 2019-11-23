@@ -4,8 +4,11 @@ author: "Miroslav Pillar"
 date: "2019-11-23"
 description: "I wanted to become a full-time developer, so I set a goal to get a job within one year. In fact, I've got hired after 7 months."
 imageBanner: "../images/journey.jpg"
+imageBannerAuthor: "Jesse Bowser"
+imageBannerAuthorLink: "https://unsplash.com/@jessebowser"
+imageBannerSource: "Unsplash"
+imageBannerSourceLink: "https://unsplash.com/"
 ---
-<span style="color:grey; font-size: 15px; display: block; text-align: center;">Photo by [Jesse Bowser](https://unsplash.com/@jessebowser) on [Unsplash](https://unsplash.com/)</span>
 &NewLine;
 
 I see many smart people who are not fulfilled by their current job and they are searching for a change, but struggling where to start these days. Or people, who want to become developers one day, but are discouraged they don't have enough skills or computer science degree. Well, you came to right place for finding new inspiration or obtain another sources for (personal) development.

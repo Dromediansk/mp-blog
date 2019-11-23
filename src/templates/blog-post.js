@@ -34,6 +34,13 @@ const Helper = styled.span`
     }
 `
 
+const ImgCaption = styled.div`
+    color: grey;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 8px;
+`
+
 const DescriptionWrapper = styled.div`
     padding: 2rem 0;
     margin: auto 0;
@@ -146,6 +153,11 @@ export default ({ data, pageContext }) => {
                     <Helper>
                         <img src={imageBannerPath} alt="banner" />
                     </Helper>
+                    <ImgCaption>
+                        <a href={post.frontmatter.imageBannerAuthorLink} target="_blank"
+                            rel="noopener noreferrer">{post.frontmatter.imageBannerAuthor}</a> by <a href={post.frontmatter.imageBannerSourceLink} target="_blank"
+                                rel="noopener noreferrer">{post.frontmatter.imageBannerSource}</a>
+                    </ImgCaption>
                 </ImgBannerWrapper>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 <EndContainer>
@@ -251,6 +263,10 @@ export const query = graphql`
                         }
                     }
                 }
+                imageBannerAuthor
+                imageBannerAuthorLink
+                imageBannerSource
+                imageBannerSourceLink
             }
         }
     }
