@@ -1,11 +1,11 @@
 ---
 title: "Engage potential customers by building professional-looking website with these 4 principles"
 author: "Miroslav Pillar"
-date: "2019-11-16"
+date: "2019-11-23"
 description: "Handy tips how to build professional webpage and not blend with the crowd."
-imageBanner: "../images/portfolio1.jpg"
+imageBanner: "../images/prof_website.jpg"
 ---
-<span style="color:grey; font-size: 15px; display: block; text-align: center;">Photo by [Lauren Mancke](https://unsplash.com/@laurenmancke) on [Unsplash](https://unsplash.com/)</span>
+<span style="color:grey; font-size: 15px; display: block; text-align: center;">Photo by [Le Buzz](https://unsplash.com/@le_buzz) on [Unsplash](https://unsplash.com/)</span>
 &NewLine;
 
 Truth is that building a website has never been easier than it is today. You need to know basics of HTML and CSS and that's it - you have basic website!

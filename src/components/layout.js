@@ -14,12 +14,10 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
     margin: 0 auto;
-    padding-top: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 2rem 1rem 0 1rem;
     max-width: 960px;
     @media only screen and (max-width: 768px) {
-        padding-top: 4rem;
+        padding: 4rem 0;
   }
 `
 
