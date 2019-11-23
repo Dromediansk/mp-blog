@@ -1,16 +1,16 @@
 ---
-title: "Engage potential customers by building professional-looking website with these 4 principles"
+title: "Engage customers by building professional-looking website with these 4 principles"
 author: "Miroslav Pillar"
 date: "2019-11-24"
 description: "Handy tips how to build professional webpage and not blend with the crowd."
 imageBanner: "../images/prof_website.jpg"
 ---
-<span style="color:grey; font-size: 15px; display: block; text-align: center;">Photo by [Le Buzz](https://unsplash.com/@le_buzz) on [Unsplash](https://unsplash.com/)</span>
+<span style="color:grey; font-size: 15px; display: block; text-align: center;">Photo by [Igor Miske](https://unsplash.com/@igormiske) on [Unsplash](https://unsplash.com/)</span>
 &NewLine;
 
 Truth is that building a website has never been easier than it is today. You need to know basics of HTML and CSS and that's it - you have basic website!
 
- The bigger challenge though, is to create modern professional-looking site attracting attention on glimpse with high-quality content and accessible for search engines or any mobile device. If you want that to accomplish, you're on the right place. 
+ A bigger challenge though, is to create modern professional-looking site attracting attention on glimpse with high-quality content and accessible for search engines or any mobile device. If you want that to accomplish, you're on the right place. 
 
  From my perspective I would divide page quality into 4 main principles you should observe: _meaningful content, design, technology_ and _accessibility_.
 
@@ -49,7 +49,7 @@ Another requirement for building high-quality site is to have right sources - to
 
 - It is necessary to have appropriate _**color theme**_. You can explore and choose one [in this color palette from Adobe](https://color.adobe.com/explore). Be aware of sufficient contrast between background and texts to keep principles of accessibility. More about that topic later in this article.
 - If you don't have artistic _**images**_ in your storage, feel free to use illustrations from [Freellustrations](https://freellustrations.com/), [Iconscout](https://iconscout.com/paper-illustrations) or [Delesign](https://delesign.com/free-designs/graphics/). For high-resolution photos I recommend searching in [Unsplash](https://unsplash.com/), [Pexels](https://www.pexels.com/) or [Pixabay](https://thenextscoop.com/websites-download-free-quality-images/).
-- _**Animations**_. Trust me, people glad to visit fluid and nice-looking pages. They shouldn't be excessive or too many, so if you are beginner in this field, make them simple and lightweight. The less is sometimes more. You can code them in pure CSS or use one of the animation libraries - e.g. [Animate.css](https://daneden.github.io/animate.css/).
+- _**Animations**_. Trust me, people glad to visit fluid and nice-looking pages. They shouldn't be excessive or too many, so if you are beginner in this field, make them simple and lightweight. Less is sometimes more. You can code them in pure CSS or use one of the animation libraries - e.g. [Animate.css](https://daneden.github.io/animate.css/).
 - You don't have to reinvent the wheel, therefore there is one more and much simplier option - _**templates**_, which help to create website in just few hours. You can use [Startbootstrap](https://startbootstrap.com/themes/) or [Creative Tim](https://www.creative-tim.com/). On the other hand it has its downside - you will not experience mysterious behaviours of CSS.
 
 > “Design is not just what it looks like and feels like. Design is how it works.” 
