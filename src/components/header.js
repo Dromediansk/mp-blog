@@ -57,7 +57,7 @@ const Header = ({ siteTitle }) => (
         ><LogoStyled src={Logo} alt="MP logo" />
         </Link>
         <h3 style={{ margin: 'auto 0', color: '#ddd' }}>Blog</h3>
-        <MainPageButton><a href="https://miroslavpillar.com" target="_blank" rel="noopener noreferrer">Go to miroslavpillar.com</a></MainPageButton>
+        <MainPageButton><a href="https://miroslavpillar.com" target="_blank" rel="noopener noreferrer">Home</a></MainPageButton>
     </HeaderBanner>
 )
 
