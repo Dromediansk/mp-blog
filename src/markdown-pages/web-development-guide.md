@@ -120,7 +120,7 @@ With Javascript you can build pretty much anything - from frontend with [librari
 
 To sum things up, here are the five steps how you should approach to learn web development, be attractive for employers and not get overwhelmed:
 
-1. **_Motivation_** - have your own model to stay motivated in long-term. Set up a specific goal for particular period of time.
+1. **_Motivation_** - have your own model to stay motivated in the long-term. Set up a specific goal for a particular period of time.
 2. **_Regularity_** - code and learn new technologies at least 4-5 days a week.
 3. **_Creativity_** - build your own projects. Employers appreciate practical experience. I would be keen to invite someone to interview, who contributes to open-source projects.
 4. **_Effectivity_** - don't solve excessively hard problems for many hours. Simplify things by dividing problems into smaller parts. Use Google, because most likely someone had solved this problem before. And if not, ask!
