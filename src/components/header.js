@@ -59,7 +59,7 @@ const MainPageButton = styled.button`
 `
 
 const Header = memo(() => {
-    const [position, setPosition] = useState(window.pageYOffset);
+    const [position, setPosition] = useState(0);
     const [visible, setVisible] = useState(true);
 
     useEffect(() => {
