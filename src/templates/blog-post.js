@@ -142,7 +142,9 @@ export default ({ data, pageContext }) => {
             <div>
                 <h1>{post.frontmatter.title}</h1>
                 <DescriptionWrapper>
-                    <Avatar />
+                    <div>
+                        <Avatar />
+                    </div>
                     <Description>{post.frontmatter.description}</Description>
                 </DescriptionWrapper>
                 <BlogPublish>
