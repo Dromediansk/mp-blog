@@ -41,7 +41,7 @@ Such implementation costs more time and money of course. If you are saving costs
 
 You can do it by implementing specific attributes to HTML tags. By using these attributes you mark tags, so devices mentioned earlier could recognize them and handle navigation on the website.
 
-The desired attributes are `tabindex`, `aria-label` and `alt`.
+The desired attributes are `tabindex`, `aria-label`&nbsp;and `alt`.
 
 #### Tabindex
 
@@ -59,9 +59,9 @@ Let me demonstrate an example, how to implement such a feature:
 
 `gist:Dromediansk/bbba24f63e0b0369360daebeb78ea9dd#index.html`
 
-If you test this using _Tab_ key on your keyboard, `<input>` tag is naturally tabbable, because of HTML standards. However, `<span>` and `<button>`are tabbable only because of `tabindex="0"` and `<div>` is not tabbable at all.
+If you test this using _Tab_ key on your keyboard, `<input>`&nbsp;tag is naturally tabbable, because of HTML standards. However, `<span>`&nbsp;and `<button>`&nbsp;are tabbable only because of `tabindex="0"`&nbsp;and `<div>`&nbsp;is not tabbable at all.
 
-Avoid using `tabindex` with _positive_ values. Doing so makes it difficult for people who rely on assistive devices to navigate and operate page content. Instead, write the document with the elements in a logical sequence.
+Avoid using `tabindex`&nbsp;with _positive_ values. Doing so makes it difficult for people who rely on assistive devices to navigate and operate page content. Instead, write the document with the elements in a logical sequence.
 
 On the other hand, using _negative_ values usually means that element is not accessible via sequential keyboard navigation, but could be focused with Javascript or visually. It’s mostly useful to create accessible widgets with JavaScript.
 
@@ -84,7 +84,7 @@ There are many [types of ARIA attributes](https://developers.google.com/web/fund
 
 #### **Alt**
 
-This attribute is used in `<img />` tag as a backup, if a website is viewed on a device or mode, which does not support images, e.g. voice assistant when reading.
+This attribute is used in `<img />`&nbsp;tag as a backup, if a website is viewed on a device or mode, which does not support images, e.g. voice assistant when reading.
 
 Example: `<img src="link-to-puppy-dog" alt="white puppy" />`
 
@@ -105,7 +105,7 @@ As discussed earlier SEO is affected also by the state of accessibility. I would
 
 #### **How can I actually improve SEO?**
 
-Besides working on accessibility it can be improved by putting `<meta>` tags into the `<head>` section. They provide metadata about the HTML document. Metadata will not be displayed on the page but will be machine parsable.
+Besides working on accessibility it can be improved by putting `<meta>`&nbsp;tags into the `<head>`&nbsp;section. They provide metadata about the HTML document. Metadata will not be displayed on the page but will be machine parsable.
 
 Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata. They are used by browsers (how to display content), search engines (keywords), or other web services.
 
@@ -126,7 +126,7 @@ There are a couple of specific OG meta tags you can use:
 
 Let me break it down into smaller pieces:
 
-*   `og-title` : The title of your shared link
+*   `og-title`: The title of your shared link
 *   `og-type`: The type of your object, e.g. video.movie, article, etc.
 *   `og-url`: The canonical URL of your link
 *   `og-image`: The URL of the image in the shared link

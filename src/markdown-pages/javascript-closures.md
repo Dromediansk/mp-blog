@@ -26,7 +26,7 @@ _The requirements are familiarity with functions and Javascript runtime environm
 
 ---
 
-If you want to grasp the main point of why closures are useful, the prerequisite is good knowledge of *functions *and _lexical scoping _(or* lexical environment*)*. *A combination of these two aspects is the core of closures.
+If you want to grasp the main point of why closures are useful, the prerequisite is good knowledge of _functions_ and _lexical scoping_ (or _lexical environment_). A combination of these two aspects is the core of closures.
 
 So let’s take it over one by one.
 
@@ -34,7 +34,7 @@ So let’s take it over one by one.
 
 I am pretty sure that you have at least a basic knowledge of functions if you code in Javascript. Otherwise, it would be like baking a cake without cooking tools.
 
-However, you should also know the term which is closely bound with closures and that is _higher-order functions._
+However, you should also know the term which is closely bound with closures and that is _higher-order functions_.
 
 #### Higher-order function (HOC)
 
@@ -42,13 +42,13 @@ It’s a type of function that either takes a function as an argument, returns a
 
 Here is a basic example from daily praxis:
 
-If you work with arrays, I suppose you came across array methods such as `Array.map()`, `Array.filter()` or `Array.reduce()`. All of them take a function as an argument. All of them are higher-order functions.
+If you work with arrays, I suppose you came across array methods such as `Array.map()`, `Array.filter()`&nbsp;or `Array.reduce()`. All of them take a function as an argument. All of them are higher-order functions.
 
 Let’s write another example:
 
 `gist:Dromediansk/63f5d1f37656ab4bc59897134edbc837#index.js`
 
-The `handleFamily` function is using a _fat arrow_ function expression, which was introduced in ECMAScript 2015 (ES6). Inside this function, we have declared a variable `myGrandpa` and returns another function `sayHello`, so it is a Higher Order function.
+The `handleFamily`&nbsp;function is using a _fat arrow_ function expression, which was introduced in ECMAScript 2015 (ES6). Inside this function, we have declared a variable `myGrandpa`&nbsp;and returns another function `sayHello`, so it is a Higher Order function.
 
 If we call (invoke) `handleFamily`, this is what we get:
 
@@ -64,7 +64,7 @@ handleFamily()();
 ==> 'Hello there!'
 ```
 
-These two brackets one after another basically mean that whatever we return from `handleFamily`, we call again. We could also assign the called `handleFamily` to a variable so it would be like this:
+These two brackets one after another basically mean that whatever we return from `handleFamily`, we call again. We could also assign the called `handleFamily`&nbsp;to a variable so it would be like this:
 
 ```
 const holdFamily = handleFamily();
@@ -76,27 +76,27 @@ We tend to use HOC all the time. If you’re a JavaScript programmer or if you�
 
 #### Execution scope
 
-It’s also required to know what really happens if a function is called. In Javascript, every function creates its _local execution scope _(or also so-called _local execution context_). What does it mean?
+It’s also required to know what really happens if a function is called. In Javascript, every function creates its _local execution scope_ (or also so-called _local execution context_). What does it mean?
 
 - It means, that every variable, which is declared in this scope is also local to this scope.
 
-- The outer scope of the function — in our case, _global scope _— has no access to these variables.
+- The outer scope of the function — in our case, _global scope_ — has no access to these variables.
 
 - On the other hand, the local scope is able to access variables from its outer scope. The reason is _because of closures_, which I explain later in this story.
 
 - It is a good practice to write variables, where they are needed. Therefore you might avoid side-effects and memory overloading of the Javascript engine.
 
-In our example, the local execution scope of `handleFamily` is where the first opening curly bracket (line 1) is and ends with the last closing bracket (line 7). Its local variables are `myGrandpa` and `sayHello`.
+In our example, the local execution scope of `handleFamily`&nbsp;is where the first opening curly bracket (line 1) is and ends with the last closing bracket (line 7). Its local variables are `myGrandpa`&nbsp;and `sayHello`.
 
-The `sayHello` function has of course also its local execution scope, where `myFather` is declared. This means if you want to access this variable from `handleFamily` (the outer scope) you get an error because Javascript won’t see it.
+The `sayHello`&nbsp;function has of course also its local execution scope, where `myFather`&nbsp;is declared. This means if you want to access this variable from `handleFamily`&nbsp;(the outer scope) you get an error because Javascript won’t see it.
 
 # Lexical scope
 
 It is a quite fancy name, but yet easy to understand. The best way how would I explain to you this term is by dividing these words:
 
-- *lexical — *means **where **is a code written,
+- _lexical_ — means **where** is a code written,
 
-- _scope _— **what **variables we have access to.
+- _scope_ — what **variables** we have access to.
 
 What do I mean by that?
 
@@ -108,25 +108,25 @@ Eventually, in terms of scoping it matters, where a function is written, not whe
 
 # **The coherence**
 
-Now, since we are familiar with functions and lexical scoping, let’s combine them. I will modify our `handleFamily` function in the following manner:
+Now, since we are familiar with functions and lexical scoping, let’s combine them. I will modify our `handleFamily`&nbsp;function in the following manner:
 
 `gist:Dromediansk/3c0cc12281a31d8441a49c2170f150fd#index.js`
 
 What do you expect the result would be?
 
 ```
-==> `'Hello grandpa and father!'`
+==> 'Hello grandpa and father!'
 ```
 
-If you work with Javascript I assume you are familiar with such behavior, but I think it’s quite important to understand why this happens. So let’s dismantle the whole process with reference on _Image 2_.
+If you work with Javascript I assume you are familiar with such behavior, but I think it’s quite important to understand why this happens. So let’s dismantle the whole process.
 
 #### Dismantling the execution
 
-When I had assigned `handleFamily` to a variable `hold` (line 9), its execution context was executed and popped off the _call stack_. When this happens, it usually means that the variable environment is destroyed as well. However, every function creates a closure, which has reserved space in the memory heap. If some variable is being referenced in one of the inner functions, the variable is saved in the closure memory waiting for use.
+When I had assigned `handleFamily`&nbsp;to a variable `hold`&nbsp;(line 9), its execution context was executed and popped off the _call stack_. When this happens, it usually means that the variable environment is destroyed as well. However, every function creates a closure, which has reserved space in the memory heap. If some variable is being referenced in one of the inner functions, the variable is saved in the closure memory waiting for use.
 
-By calling `hold()` on line 11 we execute `sayHello` function. The `myFather` variable is declared in the same scope and immediately used. On the other hand, `myGrandpa` is declared in the outer scope. That means the Javascript engine will go up to the outer scope and search for the `myGrandpa` in the closure memory. In our case, the variable is present there.
+By calling `hold()`&nbsp;on line 11 we execute `sayHello`&nbsp;function. The `myFather`&nbsp;variable is declared in the same scope and immediately used. On the other hand, `myGrandpa`&nbsp;is declared in the outer scope. That means the Javascript engine will go up to the outer scope and search for the `myGrandpa`&nbsp;in the closure memory. In our case, the variable is present there.
 
-_Theoretically, if `myGrandpa` wouldn’t be declared in the outer scope, it would go up to another level (in our case in the global scope) and search for the variable there. If it would be still absent, it would return an error._
+_Theoretically, if `myGrandpa`&nbsp;wouldn’t be declared in the outer scope, it would go up to another level (in our case in the global scope) and search for the variable there. If it would be still absent, it would return an error._
 
 This is quite a unique behavior compared to other languages. Javascript engine will always make sure that functions have access to all of the variables outside the function using closures.
 
@@ -153,7 +153,7 @@ const produceCandy = (index) => {
 
 Let’s briefly describe what is happening here:
 
-- The variable `candyFactory` creates an array, which has 7000 items.
+- The variable `candyFactory`&nbsp;creates an array, which has 7000 items.
 
 - It logs the text in the console every time when the function is called
 
@@ -175,7 +175,7 @@ the candy factory was established
 sweet candy
 ```
 
-It means, `candyFactory` is created in the memory heap before execution and destroyed after execution _every time it is called_. In our case, it’s not a big issue, but imagine you would call it ten thousand times. It would create the variable and destroy it ten thousand times, which is **memory inefficient **and might cause performance issues.
+It means, `candyFactory`&nbsp;is created in the memory heap before execution and destroyed after execution _every time it is called_. In our case, it’s not a big issue, but imagine you would call it ten thousand times. It would create the variable and destroy it ten thousand times, which is **memory inefficient **and might cause performance issues.
 
 **So what could be a SOLUTION?**
 
@@ -185,7 +185,7 @@ I would modify our function like this:
 
 `gist:Dromediansk/9bead6cd39edf7fa477ea373b1f16b85#index.js`
 
-And after calling `getProduceCandyEfficiently` 3 times this is the output:
+And after calling `getProduceCandyEfficiently`&nbsp;3 times this is the output:
 
 ```
 ==>
@@ -193,13 +193,13 @@ the candy factory was established
 sweet candy
 ```
 
-So `candyFactory` is created only once no matter how many times you call `getProduceCandyEfficiently`. After the last call, this function is eventually removed from the memory. In tasks such as processing an immense amount of data, it can significantly improve performance. Cool, right?
+So `candyFactory`&nbsp;is created only once no matter how many times you call `getProduceCandyEfficiently`. After the last call, this function is eventually removed from the memory. In tasks such as processing an immense amount of data, it can significantly improve performance. Cool, right?
 
 #### Data encapsulation
 
 This is another case when closures might be useful.
 
-Suppose we have another candy factory, which monitors the duration time of its production since the function `monitorProductivityTime` has been called. We will store this amount of time in the variable `timeWithoutReset`. The value is incremented every second in `setInterval`.
+Suppose we have another candy factory, which monitors the duration time of its production since the function `monitorProductivityTime`&nbsp;has been called. We will store this amount of time in the variable `timeWithoutReset`. The value is incremented every second in `setInterval`.
 
 Along with that, we’d like to also have a function, which would reset this duration time if needed. Let’s call it `reset`.
 
@@ -207,13 +207,13 @@ This is how would it look like (try to test it in the browser console to receive
 
 `gist:Dromediansk/4e33b74c58b3e0da04d2d2a924f8d8a9#index.js`
 
-When we call `holdTime.totalProductivityTime()` on the last line, we are measuring duration time from this moment. If you’d like to reset this time, just call `holdTime.reset()`.
+When we call `holdTime.totalProductivityTime()`&nbsp;on the last line, we are measuring duration time from this moment. If you’d like to reset this time, just call `holdTime.reset()`.
 
-Because `reset` function is inside `monitorProductivityTime`, it uses closure for accessing variable `timeWithoutReset`. Pretty logical.
+Because `reset`&nbsp;function is inside `monitorProductivityTime`, it uses closure for accessing variable `timeWithoutReset`. Pretty logical.
 
-However, the main problem in this function is that *everybody *can access `reset()`. It could be your new team member, who is not acquainted with the project yet and could mess some things up. Or any third party from outside of your company. This can cause many troubles and security issues in practice, therefore some data or functions should not be directly exposed.
+However, the main problem in this function is that _everybody_ can access `reset()`. It could be your new team member, who is not acquainted with the project yet and could mess some things up. Or any third party from outside of your company. This can cause many troubles and security issues in practice, therefore some data or functions should not be directly exposed.
 
-For this reason, you should always keep in mind the *principle of least privilege, *which is one of the security principles you should observe.\* \*It means that data can be accessed only by competent individuals.
+For this reason, you should always keep in mind the _principle of least privilege_, which is one of the security principles you should observe. It means that data can be accessed only by competent individuals.
 
 The solution to this example might be to return `reset`, only if it’s appropriate, e.g. user has a competent role to access this function.
 
