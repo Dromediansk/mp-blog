@@ -9,7 +9,6 @@ imageBannerAuthorLink: "https://unsplash.com/@dadaben_"
 imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
 ---
-&NewLine;
 
 You’ve deployed a promising website, but Google doesn’t show it in search results at all. I know how you feel.
 

@@ -21,6 +21,7 @@ const ImgBannerWrapper = styled.div`
     max-height: 70vh;
     overflow: hidden;
     text-align: center;
+    padding-bottom: 2rem;
 `
 
 const Helper = styled.span`

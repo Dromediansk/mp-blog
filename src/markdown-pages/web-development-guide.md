@@ -9,7 +9,6 @@ imageBannerAuthorLink: "https://unsplash.com/@jessebowser"
 imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
 ---
-&NewLine;
 
 I have become a web developer after 7 months of self-study. This is my journey how is that possible.
 
