@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useEffect, useState, memo } from "react"
 import styled from 'styled-components'
 
 import Logo from '../images/Logo-portfolio.png'
@@ -17,6 +17,18 @@ const HeaderBanner = styled.header`
     -moz-box-shadow: 0px 5px 23px 15px rgba(169,169,169,1);
     box-shadow: 0px 5px 23px 15px rgba(169,169,169,1);
     z-index: 10;
+`
+
+const Transition = styled.div`
+    .active {
+        visibility: visible;
+        transition: all 200ms ease-in;
+    }
+    .hidden {
+    visibility: hidden;
+    transition: all 200ms ease-out;
+    transform: translate(0, -100%);
+  }
 `
 
 const LogoStyled = styled.img`
@@ -46,19 +58,38 @@ const MainPageButton = styled.button`
     }
 `
 
-const Header = ({ siteTitle }) => (
-    <HeaderBanner>
-        <Link
-            to="/"
-            style={{
-                color: `white`,
-                textDecoration: `none`
-            }}
-        ><LogoStyled src={Logo} alt="MP logo" />
-        </Link>
-        <MainPageButton><a href="https://miroslavpillar.com" target="_blank" rel="noopener noreferrer">Home</a></MainPageButton>
-    </HeaderBanner>
-)
+const Header = memo(() => {
+    const [position, setPosition] = useState(window.pageYOffset);
+    const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            let temp = window.pageYOffset
+
+            setVisible(position > temp);
+            setPosition(temp)
+        };
+        window.addEventListener("scroll", handleScroll);
+        return (() => {
+            window.removeEventListener("scroll", handleScroll);
+        })
+    })
+    return (
+        <Transition>
+            <HeaderBanner className={visible ? "active" : "hidden"}>
+                <Link
+                    to="/"
+                    style={{
+                        color: `white`,
+                        textDecoration: `none`
+                    }}
+                ><LogoStyled src={Logo} alt="MP logo" />
+                </Link>
+                <MainPageButton><a href="https://miroslavpillar.com" target="_blank" rel="noopener noreferrer">Home</a></MainPageButton>
+            </HeaderBanner>
+        </Transition>
+    )
+}, (prevProps, nextProps) => prevProps.visible === nextProps.visible);
 
 Header.propTypes = {
     siteTitle: PropTypes.string,
