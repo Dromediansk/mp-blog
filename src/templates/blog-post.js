@@ -9,6 +9,10 @@ import { Twitter } from "styled-icons/boxicons-logos/Twitter"
 import Avatar from "../components/image"
 import SEO from "../components/seo"
 
+const BlogContainer = styled.div`
+    margin-top: 20px;
+`
+
 const BlogPublish = styled.div`
     display: flex;
     justify-content: space-between;
@@ -139,7 +143,7 @@ export default ({ data, pageContext }) => {
                 description={post.frontmatter.description}
                 pathname={pageContext.slug}
             />
-            <div>
+            <BlogContainer>
                 <h1>{post.frontmatter.title}</h1>
                 <DescriptionWrapper>
                     <div>
@@ -244,7 +248,7 @@ export default ({ data, pageContext }) => {
                         </ul>
                     </SocialWrapper>
                 </EndContainer>
-            </div>
+            </BlogContainer>
         </Layout>
     )
 }
