@@ -1,7 +1,7 @@
 exports.onServiceWorkerUpdateReady = () => {
     if (
         window.confirm(
-            "This site has been updated with new data. Do you wish to reload the site to get the new data?"
+            "MP blog has been updated. Please refresh the page to get the newest version."
         )
     ) {
         window.location.reload(true);
