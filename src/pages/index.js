@@ -70,7 +70,18 @@ const NumberOfArticles = styled.h4`
   color: grey;
 `
 
-const BlogDate = styled.div`
+const BasicData = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const BlogDate = styled.span`
+  color: grey;
+  font-family: "Segoe UI";
+  font-size: 0.8em;
+`
+
+const BlogAuthor = styled.span`
   color: grey;
   font-family: "Segoe UI";
   font-size: 0.8em;
@@ -99,7 +110,10 @@ export default ({ data }) => {
               </TitleWrapper>
               <p>{node.excerpt}</p>
             </BlogLink>
-            <BlogDate>{node.frontmatter.date}</BlogDate>
+            <BasicData>
+              <BlogDate>{node.frontmatter.date}</BlogDate>
+              <BlogAuthor>{node.frontmatter.author}</BlogAuthor>
+            </BasicData>
           </BlogWrapper>
         ))}
       </div>
@@ -116,15 +130,11 @@ export const query = graphql`
           excerpt
           frontmatter {
             title
+            author
             date(formatString: "MMMM DD, YYYY")
-            description
             imageBanner {
               publicURL
             }
-            imageBannerAuthor
-            imageBannerAuthorLink
-            imageBannerSource
-            imageBannerSourceLink
           }
           fields {
             slug

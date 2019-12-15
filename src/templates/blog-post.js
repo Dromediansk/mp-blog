@@ -15,6 +15,7 @@ const BlogPublish = styled.div`
     color: grey;
     font-family: "Segoe UI";
     font-size: 0.8em;
+    padding-bottom: 0.5rem;
 `
 
 const ImgBannerWrapper = styled.div`
@@ -141,9 +142,7 @@ export default ({ data, pageContext }) => {
             <div>
                 <h1>{post.frontmatter.title}</h1>
                 <DescriptionWrapper>
-                    <div>
-                        <Avatar />
-                    </div>
+                    <Avatar />
                     <Description>{post.frontmatter.description}</Description>
                 </DescriptionWrapper>
                 <BlogPublish>
