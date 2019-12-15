@@ -66,7 +66,7 @@ const Header = memo(() => {
         const handleScroll = () => {
             let temp = window.pageYOffset
 
-            setVisible(position > temp);
+            setVisible(position > temp || temp === 0);
             setPosition(temp)
         };
         window.addEventListener("scroll", handleScroll);
@@ -74,6 +74,7 @@ const Header = memo(() => {
             window.removeEventListener("scroll", handleScroll);
         })
     })
+
     return (
         <Transition>
             <HeaderBanner className={visible ? "active" : "hidden"}>
