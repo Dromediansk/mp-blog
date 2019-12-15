@@ -81,7 +81,7 @@ export default ({ data }) => {
     <Layout>
       <SEO />
       <div>
-        <h1>Miroslav's posts</h1>
+        <h1>Blog</h1>
         <NumberOfArticles>
           Number of published articles: {data.allMarkdownRemark.totalCount}
         </NumberOfArticles>
