@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import SubscribeForm from "../components/subscribeForm"
 
 const BlogWrapper = styled.div`
   border: 2px solid #ddd;
@@ -91,6 +92,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO />
+      <SubscribeForm />
       <div>
         <h1>Blog</h1>
         <NumberOfArticles>

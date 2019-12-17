@@ -71,6 +71,12 @@ module.exports = {
                 icon: `src/images/favicon.png`, // This path is relative to the root of the site.
             },
         },
+        {
+            resolve: 'gatsby-plugin-mailchimp',
+            options: {
+                endpoint: 'https://coolwebsite.us19.list-manage.com/subscribe/post?u=5f8a76349e294ef39a71a36b9&amp;id=24dae3a83f', // add your MC list endpoint here; see instructions below
+            },
+        },
         `gatsby-plugin-offline`,
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
