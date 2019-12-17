@@ -10,15 +10,7 @@ import Avatar from "../components/image"
 import SEO from "../components/seo"
 
 const BlogContainer = styled.div`
-    border: 2px solid #ddd;
-    padding: 2rem 4rem;
-    box-shadow: 0px 1px 15px 5px rgba(0,0,0,0.55);
-    @media only screen and (max-width: 992px) {
-        padding: 1.5rem;
-    }
-    @media only screen and (max-width: 768px) {
-        padding: 1rem;
-    }
+    margin-top: 20px;
 `
 
 const BlogPublish = styled.div`
