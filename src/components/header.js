@@ -86,7 +86,7 @@ const Header = memo(() => {
                     }}
                 ><LogoStyled src={Logo} alt="MP logo" />
                 </Link>
-                <MainPageButton><a href="https://miroslavpillar.com" target="_blank" rel="noopener noreferrer">Home</a></MainPageButton>
+                <MainPageButton><a href="https://miroslavpillar.com" target="_blank" rel="noopener noreferrer">Go to portfolio</a></MainPageButton>
             </HeaderBanner>
         </Transition>
     )
