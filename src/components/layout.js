@@ -24,7 +24,6 @@ const Container = styled.div`
 const Main = styled.main`
     padding: 5rem;
     height: 100%;
-    margin-top: 20px;
     a {
         font-style: italic;
     }
