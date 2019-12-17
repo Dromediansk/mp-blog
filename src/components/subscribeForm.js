@@ -20,6 +20,12 @@ const Form = styled.form`
     }
     button, input {
         padding: 0.5rem 1rem;
+        @media only screen and (max-width: 768px) {
+            margin: 0.3rem 0;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        padding: 1rem;
     }
 `
 
@@ -51,6 +57,9 @@ const FormWrapper = styled.div`
     flex-direction: row;
     align-items: center;
     width: 100%;
+    @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 const SubscribeMessage = styled.div`

@@ -92,9 +92,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO />
-      <SubscribeForm />
       <div>
         <h1>Blog</h1>
+        <SubscribeForm />
         <NumberOfArticles>
           Number of published articles: {data.allMarkdownRemark.totalCount}
         </NumberOfArticles>
