@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 const Container = styled.div`
     margin: 0 auto;
     padding: 2rem 1rem 0 1rem;
-    max-width: 960px;
+    max-width: 1080px;
     @media only screen and (max-width: 768px) {
         padding: 4rem 0;
   }
@@ -24,7 +24,6 @@ const Container = styled.div`
 const Main = styled.main`
     padding: 5rem;
     height: 100%;
-    margin-top: 20px;
     a {
         font-style: italic;
     }

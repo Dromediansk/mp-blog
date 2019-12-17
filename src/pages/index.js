@@ -10,9 +10,7 @@ const BlogWrapper = styled.div`
   border: 2px solid #ddd;
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
-  -webkit-box-shadow: 6px 6px 9px -4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 6px 6px 9px -4px rgba(0, 0, 0, 0.75);
-  box-shadow: 6px 6px 9px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 15px 5px rgba(0,0,0,0.55);
   a {
     font-style: normal;
   }
