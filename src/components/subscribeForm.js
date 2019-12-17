@@ -9,7 +9,7 @@ const Form = styled.form`
     color: #2a2a2a;
     font-family: -apple-system, Helvetica, Arial, sans-serif;
     padding: 2rem;
-    h3 {
+    p {
         margin-top: 0;
         margin-bottom: 1rem;
     }
@@ -32,7 +32,7 @@ const FormButton = styled.button`
     transition: all 0.2s linear; 
     :hover {
         cursor: pointer;
-        background: green;
+        background: #f0ad4e;
     }
 `
 
@@ -55,30 +55,29 @@ const FormWrapper = styled.div`
 
 const SubscribeMessage = styled.div`
     width: 100%;
-    .success {
-        background-color: green;
-    }
-    .error {
-        background-color: red;
-    }
 `
 
 const SubscribeForm = () => {
     const [email, setEmail] = useState('');
-    const [subscribe, setSubscribe] = useState('');
+    const [message, setMessage] = useState('');
     const [success, setSuccess] = useState(false);
+
+    const errorMessage = 'Oops! Something went wrong.';
 
     const handleSubmit = (e) => {
         e.preventDefault();
         addToMailchimp(email)
             .then((data) => {
-                console.log('data', data)
                 if (data.result === 'success') {
-                    setSubscribe(data.msg);
+                    setMessage(data.msg);
                     setSuccess(true);
+                } else {
+                    setSuccess(false);
+                    setMessage(errorMessage)
                 }
             })
             .catch(() => {
+                setMessage(errorMessage)
                 setSuccess(false);
             });
     };
@@ -89,14 +88,14 @@ const SubscribeForm = () => {
 
     const clearForm = () => {
         setEmail('');
-        setSubscribe('');
+        setMessage('');
     }
 
     return (
         <Form onSubmit={handleSubmit} className='subscribe-form'>
-            <h3>Don't miss out any article since today</h3>
+            <p>Don't miss out any article. We send feed every time new article is published.</p>
             <FormWrapper>
-                {!subscribe ?
+                {!message ?
                     <input
                         placeholder="Email"
                         name="email"
@@ -104,10 +103,10 @@ const SubscribeForm = () => {
                         onChange={handleEmailChange}
                     />
                     :
-                    <SubscribeMessage className={success ? "success" : "error"}>
-                        {subscribe.msg}
+                    <SubscribeMessage>
+                        {message}
                     </SubscribeMessage>}
-                {!success && subscribe ?
+                {!success && message ?
                     <CancelButton onClick={clearForm}>Try again</CancelButton>
                     : !success &&
                     <FormButton type="submit">Subscribe</FormButton>}

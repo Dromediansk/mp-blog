@@ -4,6 +4,7 @@ module.exports = {
         description: `Blog section about web development, Javascript and React to bring to developers new inspiration and learn something new.`,
         author: `Miroslav Pillar`,
         url: 'https://blog.miroslavpillar.com',
+        siteUrl: 'https://blog.miroslavpillar.com',
         image: '/src/images/avatar.jpg',
         article: true,
     },
@@ -75,6 +76,62 @@ module.exports = {
             resolve: 'gatsby-plugin-mailchimp',
             options: {
                 endpoint: 'https://coolwebsite.us19.list-manage.com/subscribe/post?u=5f8a76349e294ef39a71a36b9&amp;id=24dae3a83f', // add your MC list endpoint here; see instructions below
+            }
+        },
+        {
+
+            resolve: `gatsby-plugin-feed`,
+            options: {
+                query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+                feeds: [
+                    {
+                        serialize: ({ query: { site, allMarkdownRemark } }) => {
+                            return allMarkdownRemark.edges.map(edge => {
+                                return Object.assign({}, edge.node.frontmatter, {
+                                    description: edge.node.excerpt,
+                                    date: edge.node.frontmatter.date,
+                                    url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                                    guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                                    author: edge.node.frontmatter.author,
+                                })
+                            })
+                        },
+                        query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                        description
+                        author
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+                        output: "/rss.xml",
+                        title: "MP Blog Feed",
+                    },
+                ],
             },
         },
         `gatsby-plugin-offline`,
