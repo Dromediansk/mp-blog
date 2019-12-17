@@ -69,6 +69,7 @@ const BlogTitle = styled.h3`
 
 const NumberOfArticles = styled.h4`
   color: grey;
+  padding-top: 1.5rem;
 `
 
 const BasicData = styled.div`
