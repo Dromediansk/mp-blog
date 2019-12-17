@@ -97,7 +97,6 @@ module.exports = {
                                     url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                                     guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                                     author: edge.node.frontmatter.author,
-                                    image: edge.node.frontmatter.imageBanner.publicURL
                                 })
                             })
                         },
@@ -116,9 +115,6 @@ module.exports = {
                         date
                         description
                         author
-                        imageBanner {
-                            publicURL
-                        }
                       }
                     }
                   }
