@@ -132,7 +132,7 @@ const TwitterIcon = styled(Twitter)`
 
 export default ({ data, pageContext }) => {
     const post = data.markdownRemark
-    const baseUrl = "https://blog.miroslavpillar.com"
+    const baseUrl = "https://www.miroslavpillar.com"
     const { imageBanner } = post.frontmatter
     const imageBannerPath = imageBanner && imageBanner.childImageSharp.fixed.src
     return (
