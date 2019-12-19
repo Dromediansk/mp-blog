@@ -92,7 +92,8 @@ const SubscribeForm = () => {
     };
 
     const handleEmailChange = (event) => {
-        setEmail(event.currentTarget.value);
+        const newEmail = event.currentTarget.value.trim();
+        setEmail(newEmail);
     };
 
     const clearForm = () => {
