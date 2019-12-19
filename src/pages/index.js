@@ -77,16 +77,13 @@ const BasicData = styled.div`
   justify-content: space-between;
 `
 
-const BlogDate = styled.span`
+const BasicDataDiv = styled.span`
   color: grey;
   font-family: "Segoe UI";
   font-size: 0.8em;
 `
-
-const BlogAuthor = styled.span`
-  color: grey;
-  font-family: "Segoe UI";
-  font-size: 0.8em;
+const DotSpacing = styled.span`
+  padding: 0 0.3rem;
 `
 
 export default ({ data }) => {
@@ -114,8 +111,12 @@ export default ({ data }) => {
               <p>{node.excerpt}</p>
             </BlogLink>
             <BasicData>
-              <BlogDate>{node.frontmatter.date}</BlogDate>
-              <BlogAuthor>{node.frontmatter.author}</BlogAuthor>
+              <BasicDataDiv>{node.frontmatter.date}</BasicDataDiv>
+              <BasicDataDiv>
+                {node.fields.readingTime.text}
+                <DotSpacing>·</DotSpacing>
+                {node.frontmatter.author}
+              </BasicDataDiv>
             </BasicData>
           </BlogWrapper>
         ))}
@@ -141,6 +142,9 @@ export const query = graphql`
           }
           fields {
             slug
+            readingTime {
+              text
+            }
           }
         }
       }
