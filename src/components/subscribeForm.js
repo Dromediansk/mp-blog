@@ -103,7 +103,7 @@ const SubscribeForm = () => {
 
     return (
         <Form onSubmit={handleSubmit} className='subscribe-form'>
-            <p>Don't miss out any article. We send feed every time new article is published.</p>
+            <p>Don't miss out any article. I send feed every time new article is published.</p>
             <FormWrapper>
                 {!message ?
                     <input
