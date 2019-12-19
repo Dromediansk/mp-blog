@@ -77,16 +77,23 @@ const SubscribeForm = () => {
 
     const errorMessage = 'Oops! Something went wrong.';
 
+    const cutString = (str) => {
+        const newStr = str.split("MP Blog")[0];
+        return newStr;
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         addToMailchimp(email)
             .then((data) => {
+                setMessage(data.msg);
                 if (data.result === 'success') {
-                    setMessage(data.msg);
                     setSuccess(true);
                 } else {
+                    if (data.msg.includes('already subscribed')) {
+                        setMessage(cutString(data.msg))
+                    }
                     setSuccess(false);
-                    setMessage(errorMessage)
                 }
             })
             .catch(() => {
