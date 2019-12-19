@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useEffect, useState, memo } from "react"
 import styled from 'styled-components'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import Logo from '../images/Logo-portfolio.png'
 
@@ -86,7 +87,7 @@ const Header = memo(() => {
                     }}
                 ><LogoStyled src={Logo} alt="MP logo" />
                 </Link>
-                <MainPageButton><a href="https://web.miroslavpillar.com" target="_blank" rel="noopener noreferrer">Go to portfolio</a></MainPageButton>
+                <MainPageButton><OutboundLink href="https://web.miroslavpillar.com" target="_blank" rel="noopener noreferrer">Go to portfolio</OutboundLink></MainPageButton>
             </HeaderBanner>
         </Transition>
     )
