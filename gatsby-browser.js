@@ -1,29 +1,11 @@
-import { Refresh } from 'styled-icons/material/Refresh'
+import React from 'react'
 
 export const onServiceWorkerUpdateReady = () => {
-    const showNotification = () => {
-        Notification.requestPermission(result => {
-            const reload = () => {
-                window.location.reload(true);
-            }
-            if (result === 'granted') {
-                navigator.serviceWorker.ready.then(registration => {
-                    registration.showNotification('Update', {
-                        body: 'New version is available!',
-                        icon: Refresh,
-                        vibrate: [200, 100, 200, 100, 200, 100, 400],
-                        tag: 'request',
-                        actions: [
-                            {
-                                action: reload(),
-                                title: 'Update'
-                            }
-                        ]
-                    })
-                })
-            }
-        })
+    const update = () => {
+        window.location.reload()
     }
-
-    showNotification()
+    return <div>
+        <span>New version of app is available</span>
+        <button onClick={update}>Update</button>
+    </div>
 }
