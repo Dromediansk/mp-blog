@@ -7,6 +7,7 @@ const Form = styled.form`
     flex-direction: column;
     background: #ddd;
     color: #2a2a2a;
+    border-radius: 4px;
     font-family: -apple-system, Helvetica, Arial, sans-serif;
     padding: 2rem;
     p {
@@ -17,9 +18,11 @@ const Form = styled.form`
         color: #2a2a2a;
         width: 100%;
         border: none;
+        outline: none;
     }
     button, input {
         padding: 0.5rem 1rem;
+        border-radius: 4px;
         @media only screen and (max-width: 768px) {
             margin: 0.3rem 0;
         }
@@ -45,6 +48,7 @@ const FormButton = styled.button`
 const CancelButton = styled.button`
     display: inline-block;
     border: none;
+    border-radius: 4px;
     letter-spacing: 1px;
     transition: all 0.2s linear; 
     width: 200px;
