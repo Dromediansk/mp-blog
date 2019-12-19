@@ -1,11 +1,9 @@
-import React from 'react'
-
 export const onServiceWorkerUpdateReady = () => {
-    const update = () => {
+    const answer = window.confirm(
+        `This application has been updated. ` +
+        `Reload to display the latest version?`
+    )
+    if (answer === true) {
         window.location.reload()
     }
-    return <div>
-        <span>New version of app is available</span>
-        <button onClick={update}>Update</button>
-    </div>
 }
