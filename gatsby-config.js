@@ -9,14 +9,6 @@ module.exports = {
         article: true,
     },
     plugins: [
-        {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                trackingId: 'UA-154743536-1',
-                head: true,
-                respectDNT: true
-            }
-        },
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
