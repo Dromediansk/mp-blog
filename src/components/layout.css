@@ -681,6 +681,6 @@ pre tt:after {
     background: #c0d0e1
   }
 
-  body.dark-mode pre, body.dark-mode blockquote, body.dark-mode .end-container > div {
+  body.dark-mode pre, body.dark-mode code, body.dark-mode blockquote, body.dark-mode .end-container > div {
     background: #0e161e
   }
