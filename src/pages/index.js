@@ -97,7 +97,7 @@ export default ({ data }) => {
           Number of published articles: {data.allMarkdownRemark.totalCount}
         </NumberOfArticles>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <BlogWrapper key={node.id}>
+          <BlogWrapper key={node.id} className="blog-wrapper">
             <BlogLink to={node.fields.slug}>
               <TitleWrapper>
                 <BlogTitle>{node.frontmatter.title}</BlogTitle>

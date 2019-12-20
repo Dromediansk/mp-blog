@@ -161,12 +161,12 @@ export default ({ data, pageContext }) => {
                     </Helper>
                     <ImgCaption>
                         <a href={post.frontmatter.imageBannerAuthorLink} target="_blank"
-                            rel="noopener noreferrer">{post.frontmatter.imageBannerAuthor}</a> by <a href={post.frontmatter.imageBannerSourceLink} target="_blank"
+                            rel="noopener noreferrer">{post.frontmatter.imageBannerAuthor}</a> <span>by</span> <a href={post.frontmatter.imageBannerSourceLink} target="_blank"
                                 rel="noopener noreferrer">{post.frontmatter.imageBannerSource}</a>
                     </ImgCaption>
                 </ImgBannerWrapper>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                <EndContainer>
+                <EndContainer className="end-container">
                     <ContactLinks>
                         <li>
                             Website:{" "}

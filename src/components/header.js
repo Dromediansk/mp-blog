@@ -4,6 +4,7 @@ import React, { useEffect, useState, memo } from "react"
 import styled from 'styled-components'
 
 import Logo from '../images/Logo-portfolio.png'
+import DarkModeToggle from "../theme/darkModeToggle"
 
 const HeaderBanner = styled.header`
     position: fixed;
@@ -36,6 +37,9 @@ const LogoStyled = styled.img`
     height: auto;
     margin: 0;
     vertical-align: middle;
+    @media only screen and (max-width: 768px) {
+    width: 70px;
+  }
 `
 
 const MainPageButton = styled.button`
@@ -86,7 +90,8 @@ const Header = memo(() => {
                     }}
                 ><LogoStyled src={Logo} alt="MP logo" />
                 </Link>
-                <MainPageButton><a href="https://web.miroslavpillar.com" target="_blank" rel="noopener noreferrer">Go to portfolio</a></MainPageButton>
+                <DarkModeToggle />
+                <MainPageButton><a href="https://web.miroslavpillar.com" target="_blank" rel="noopener noreferrer">Portfolio</a></MainPageButton>
             </HeaderBanner>
         </Transition>
     )

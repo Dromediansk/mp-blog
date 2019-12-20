@@ -645,3 +645,42 @@ pre tt:after {
   ::-webkit-scrollbar-thumb:hover {
     background: black;
   }
+
+  body.dark-mode {
+    background: #1b2938;
+    color: #ddd;
+  }
+
+  body.dark-mode header {
+    background: #5e5e5e;
+    box-shadow: 0px 10px 20px -8px rgba(94,94,94,1);
+  }
+
+  body.dark-mode footer {
+    background: #5e5e5e;
+    color: #ddd;
+  }
+
+  body.dark-mode .blog-wrapper {
+     box-shadow: 0px 0px 30px 0px rgba(94,94,94,1);
+  }
+
+  body.dark-mode h3, body.dark-mode p, body.dark-mode a, body.dark-mode span {
+    color: #ddd;
+  }
+
+  body.dark-mode h4 {
+    color: #ccc;
+  }
+
+  body.dark-mode form {
+    background: #344f6c;
+  }
+
+  body.dark-mode input {
+    background: #c0d0e1
+  }
+
+  body.dark-mode pre, body.dark-mode blockquote, body.dark-mode .end-container > div {
+    background: #0e161e
+  }

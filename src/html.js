@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-export default function HTML(props) {
+const HTML = (props) => {
   const ads = process.env.NODE_ENV === 'production' &&
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />;
   return (
@@ -40,3 +40,5 @@ HTML.propTypes = {
   body: PropTypes.string,
   postBodyComponents: PropTypes.array,
 }
+
+export default HTML

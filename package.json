@@ -15,6 +15,7 @@
     "gatsby-plugin-react-helmet": "^3.1.14",
     "gatsby-plugin-sharp": "^2.2.6",
     "gatsby-plugin-styled-components": "^3.1.12",
+    "gatsby-plugin-use-dark-mode": "^1.1.2",
     "gatsby-remark-copy-linked-files": "^2.1.29",
     "gatsby-remark-embed-gist": "^1.1.9",
     "gatsby-remark-external-links": "0.0.4",
@@ -29,7 +30,8 @@
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "styled-components": "^4.4.1",
-    "styled-icons": "^8.6.0"
+    "styled-icons": "^8.6.0",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
