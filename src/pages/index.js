@@ -93,7 +93,7 @@ export default ({ data }) => {
       <SEO />
       <div>
         <h1>BLOG</h1>
-        <GoogleAds slot="8672207459" style={{ maxHeight: '30vh' }} />
+        <GoogleAds slot="8672207459" />
         <SubscribeForm />
         <NumberOfArticles>
           Number of published articles: {data.allMarkdownRemark.totalCount}

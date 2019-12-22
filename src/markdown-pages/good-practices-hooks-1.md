@@ -10,6 +10,8 @@ imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
 ---
 
+<GoogleAds slot="1792788544" />
+
 There’s nothing easier for developers out there than building a simple React application using create-react-app. So why should you devote your precious time to this piece?
 
 Well, because many times it’s not about _what_ to build but _how_ to build it the right way. You can have a groundbreaking idea that’d attract crowds, but if you mess up the foundations of the project, it’ll be pretty difficult to rescue it.
