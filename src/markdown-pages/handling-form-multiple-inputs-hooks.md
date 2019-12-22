@@ -10,8 +10,6 @@ imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
 ---
 
-<GoogleAds slot="1792788544" />
-
 Forms are used all over the place. Web developers can’t survive without at least a decent knowledge of forms. They are in every web app that has some kind of interaction with a user.
 
 The question is if there is an elegant solution to handling form with multiple inputs using React Hooks.

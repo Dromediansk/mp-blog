@@ -10,8 +10,6 @@ imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
 ---
 
-<GoogleAds slot="1792788544" />
-
 There’s nothing easier for developers out there than building a simple React application using create-react-app. So why should you devote your precious time to this piece?
 
 Well, because many times it’s not about _what_ to build but _how_ to build it the right way. You can have a groundbreaking idea that’d attract crowds, but if you mess up the foundations of the project, it’ll be pretty difficult to rescue it.
@@ -128,15 +126,20 @@ There are a few things you should notice:
 
 #### UseEffect hook
 
-The only thing we’re still missing in this component is the request to the API and the passing of the data to `countries`. Fetching data is recommended to execute the [useEffect](https://reactjs.org/docs/hooks-effect.html) hook correctly:
+The only thing we’re still missing in this component is the request to the API and the passing of the data to `countries`.
+
+Fetching data is recommended to execute in the [useEffect](https://reactjs.org/docs/hooks-effect.html) hook.
 
 `gist:Dromediansk/33e0e2a58e1ec3e799212a8e64df4102#CountriesContainer.js`
 
-- Here we’re calling the function we created earlier
-
-- After that, we’re getting a response with data, which we’ll then pass into the `countries`&nbsp;state using `setCountries`
-
-- `useEffect`&nbsp;has a specific syntax you should be aware of. Notice line 7, where we have an empty array as the second argument — it means this `useEffect`&nbsp;will be executed only once after rendering the component. It’s equivalent to `componentDidMount`&nbsp;in class-based components.
+- In order to write it properly, we need also to check if the component is still mounted. Therefore we are firstly declaring a new variable `componentIsMounted`. It uses [useRef hook](https://reactjs.org/docs/hooks-reference.html#useref), which returns a mutable reference object whose `.current` property is initialized to the passed argument (`initialValue`)
+- In `useEffect` we’re calling `getAllCountries` function we created earlier
+- Because it’s an asynchronous operation, we need to check if the component is still mounted. Otherwise, it could throw an error that you can’t set the state on the umounted component.
+- If it is mounted, we’re getting a response with data, which we’ll then pass into the `countries` state using `setCountries`
+- After that, we’re getting a response with data, which we’ll then pass into the `countries` state using `setCountries`
+- It’s also necessary to handle errors if they occur during the asynchronous call. In our case, we’re only logging the error to the console, but it’s a good habit to show a message to the user, that something went wrong
+- `useEffect` has a specific syntax you should be aware of. On line 14 we have a cleanup function, in which we are setting this component as unmounted. This is an equivalent to `componentWillUnmount` in class-based components
+- Notice also line 17, where we have an empty array as the second argument — it means this `useEffect` will be executed only once after rendering the component. It’s an equivalent to `componentDidMount` in class-based components.
 
 #### CountryCard component
 
