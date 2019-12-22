@@ -5,7 +5,6 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SubscribeForm from "../components/subscribeForm"
-import GoogleAds from '../components/googleAds';
 
 const BlogWrapper = styled.div`
   border: 2px solid #ddd;
@@ -92,7 +91,6 @@ export default ({ data }) => {
     <Layout>
       <SEO />
       <div>
-        <GoogleAds slot="8672207459" />
         <h1>BLOG</h1>
         <SubscribeForm />
         <NumberOfArticles>
