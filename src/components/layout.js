@@ -23,7 +23,6 @@ const Container = styled.div`
 
 const Main = styled.main`
     padding: 5rem;
-    padding-top: 1rem;
     height: 100%;
     a {
         font-style: italic;
