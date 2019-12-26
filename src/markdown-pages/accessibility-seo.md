@@ -1,8 +1,8 @@
 ---
-title: Improve Accessibility & SEO in Your Website to Attract Bigger Crowds
+title: "Get More Website Traffic: Guide to Increasing Your SEO Ranking"
 author: "Miroslav Pillar"
-date: '2019-12-05'
-description: Handy guide how to enhance rating in Google and stand out in search results.
+date: "2019-12-05"
+description: Handy guide how to enhance rating in Google and stand out from the crowd.
 imageBanner: "../images/accessibility_SEO.jpg"
 imageBannerAuthor: "Benjamin Dada"
 imageBannerAuthorLink: "https://unsplash.com/@dadaben_"
