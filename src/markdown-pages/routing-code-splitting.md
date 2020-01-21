@@ -46,7 +46,7 @@ To start, we’re going to have three routes: `Home`, `Favourites`, and `Countri
 
 - Let’s start with the default route, which is on path `/`. It should be the first page, which will be shown if a user visits your website. In our case it’s `Home.js`.
 
-- We’re also creating route `[Favourites.js](https://github.com/Dromediansk/countries-app-blog/blob/react-router-implementation/src/routes/Favourites.js)`, which shows several countries with images. This route will be a nice example of demonstrating the code splitting of routes later in this piece. The path to this route will be `/favourites`.
+- We’re also creating route [Favourites.js](https://github.com/Dromediansk/countries-app-blog/blob/react-router-implementation/src/routes/Favourites.js), which shows several countries with images. This route will be a nice example of demonstrating the code splitting of routes later in this piece. The path to this route will be `/favourites`.
 
 - We’re moving `CountriesContainer.js` to `routes` folder, in the `/data` path. This component has been already built in the previous article.
 
@@ -144,7 +144,7 @@ How can you actually know how much data you’re saving by using the technique a
 
 Let’s analyze our website. In Chrome, open DevTools and click on the network tab.
 
-**Note:** For proper results clean the memory cache and reload the page with _shift _+ *F5 *on your keyboard.
+**Note:** For proper results clean the memory cache and reload the page with _shift_ + _F5_ on your keyboard.
 
 ![Home page](https://cdn-images-1.medium.com/max/5120/1*Rg6u7GmGvFKBzFjDjX4_KA.png)
 
