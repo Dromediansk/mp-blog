@@ -679,3 +679,8 @@ pre tt:after {
   body.dark-mode pre, body.dark-mode code, body.dark-mode blockquote, body.dark-mode .end-container > div {
     background: #0e161e
   }
+
+  body.dark-mode hr {
+    background: rgba(210,210,210,1);
+    background: radial-gradient(circle, rgba(210,210,210,1) 0%, rgba(67,127,153,1) 35%, rgba(44,83,100,1) 100%);
+  }
