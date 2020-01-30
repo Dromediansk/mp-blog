@@ -114,6 +114,10 @@ module.exports = {
                                     url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                                     guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                                     author: edge.node.frontmatter.author,
+                                    imageBanner: edge.node.frontmatter.imageBanner,
+                                    custom_elements: [{ "content:encoded": edge.node.html },
+                                    { "imageBanner": edge.node.frontmatter.imageBanner },
+                                    ],
                                 })
                             })
                         },
@@ -129,9 +133,16 @@ module.exports = {
                       fields { slug }
                       frontmatter {
                         title
-                        date
+                        date(formatString: "MMMM DD, YYYY")
                         description
                         author
+                        imageBanner {
+                            childImageSharp {
+                                fixed(width: 800, height: 350) {
+                                    src
+                                }
+                            }
+                        }
                       }
                     }
                   }
@@ -139,7 +150,7 @@ module.exports = {
               }
             `,
                         output: "/rss.xml",
-                        title: "MP Blog Feed",
+                        title: "MP Blog's Feed",
                     },
                 ],
             },
