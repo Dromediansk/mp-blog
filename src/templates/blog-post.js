@@ -8,6 +8,7 @@ import { LinkedinSquare } from "styled-icons/boxicons-logos/LinkedinSquare"
 import { Twitter } from "styled-icons/boxicons-logos/Twitter"
 import Avatar from "../components/image"
 import SEO from "../components/seo"
+import SubscribeForm from "../components/subscribeForm"
 
 const BlogContainer = styled.div`
     margin-top: 20px;
@@ -65,38 +66,9 @@ const Description = styled.p`
     margin: 0;
 `
 
-const EndContainer = styled.div`
-    display: flex;
-    @media only screen and (max-width: 768px) {
-        flex-direction: column;
-    }
-`
-
-const ContactLinks = styled.div`
-    margin-right: 0.5rem;
-    padding: 0.5rem;
-    flex: 50%;
-    background: #eee;
-    border-radius: 5px;
-    font-style: italic;
-    @media only screen and (max-width: 768px) {
-        flex: 100%;
-        margin: 0.5rem;
-    }
-    p {
-        margin-bottom: 0.5rem;
-    }
-    li {
-        list-style-type: none;
-        margin-left: 1rem;
-        line-height: 20px;
-    }
-`
-
 const SocialWrapper = styled.div`
     background: #eee;
     padding: 0.5rem;
-    margin-left: 0.5rem;
     flex: 50%;
     text-align: center;
     border-radius: 5px;
@@ -166,41 +138,10 @@ export default ({ data, pageContext }) => {
                     </ImgCaption>
                 </ImgBannerWrapper>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                <EndContainer className="end-container">
-                    <ContactLinks>
-                        <li>
-                            Website:{" "}
-                            <a
-                                href="https://www.miroslavpillar.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                www.miroslavpillar.com
-                        </a>
-                        </li>
-                        <li>
-                            LinkedIn:{" "}
-                            <a
-                                href="https://www.linkedin.com/in/miroslavpillar/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Miroslav Pillar
-                        </a>
-                        </li>
-                        <li>
-                            GitHub:{" "}
-                            <a
-                                href="https://github.com/Dromediansk"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Dromediansk
-                        </a>
-                        </li>
-                    </ContactLinks>
-                    <SocialWrapper>
-                        <h4>Share this article</h4>
+                <SubscribeForm />
+                <div className="share-social">
+                    <SocialWrapper >
+                        <h4>Share this post</h4>
                         <ul>
                             <li>
                                 <a
@@ -247,7 +188,7 @@ export default ({ data, pageContext }) => {
                             </li>
                         </ul>
                     </SocialWrapper>
-                </EndContainer>
+                </div>
             </BlogContainer>
         </Layout>
     )
