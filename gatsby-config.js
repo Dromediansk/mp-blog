@@ -99,7 +99,6 @@ module.exports = {
                 title
                 description
                 siteUrl
-                site_url: siteUrl
               }
             }
           }
@@ -107,6 +106,10 @@ module.exports = {
                 feeds: [
                     {
                         serialize: ({ query: { site, allMarkdownRemark } }) => {
+                            const {
+                                siteMetadata: { siteUrl },
+                            } = site;
+
                             return allMarkdownRemark.edges.map(edge => {
                                 return Object.assign({}, edge.node.frontmatter, {
                                     description: edge.node.excerpt,
@@ -114,10 +117,10 @@ module.exports = {
                                     url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                                     guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                                     author: edge.node.frontmatter.author,
-                                    imageBanner: edge.node.frontmatter.imageBanner,
-                                    custom_elements: [{ "content:encoded": edge.node.html },
-                                    { "imageBanner": edge.node.frontmatter.imageBanner },
-                                    ],
+                                    enclosure: edge.node.frontmatter.imageBanner && {
+                                        url: siteUrl + edge.node.frontmatter.imageBanner.publicURL,
+                                    },
+                                    custom_elements: [{ 'content:encoded': edge.node.html }],
                                 })
                             })
                         },
@@ -137,11 +140,7 @@ module.exports = {
                         description
                         author
                         imageBanner {
-                            childImageSharp {
-                                fixed(width: 800, height: 350) {
-                                    src
-                                }
-                            }
+                            publicURL
                         }
                       }
                     }
