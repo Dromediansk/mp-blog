@@ -132,7 +132,14 @@ module.exports = {
                                     guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                                     author: edge.node.frontmatter.author,
                                     custom_elements: [
-                                        { 'media:content': siteUrl + edge.node.frontmatter.imageBanner.publicURL }],
+                                        {
+                                            'media:content': {
+                                                _attr: {
+                                                    url: siteUrl + edge.node.frontmatter.imageBanner.publicURL,
+                                                    type: 'image/jpg'
+                                                }
+                                            }
+                                        }],
                                 })
                             })
                         },
