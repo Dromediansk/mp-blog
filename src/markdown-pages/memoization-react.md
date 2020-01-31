@@ -8,6 +8,9 @@ imageBannerAuthor: "Kushagra Kevat"
 imageBannerAuthorLink: "https://unsplash.com/@kushagrakevat"
 imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
+tags:
+- React
+- Performance
 ---
 
 > “The BBC found they lost an additional 10% of users for every additional second their site took to load.” — [Google Developers](https://developers.google.com/web/fundamentals/performance/why-performance-matters)

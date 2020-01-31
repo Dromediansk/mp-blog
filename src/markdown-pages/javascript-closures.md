@@ -8,6 +8,8 @@ imageBannerAuthor: "Caspar Camille Rubin"
 imageBannerAuthorLink: "https://unsplash.com/@casparrubin"
 imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
+tags:
+- Javascript
 ---
 
 When I was starting to learn Javascript, this language caused me a headache many times. Javascript is easy to learn, but hard to master and it can cause you joy and pain on the same day.

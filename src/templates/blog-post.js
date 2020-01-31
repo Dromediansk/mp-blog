@@ -203,6 +203,7 @@ export const query = graphql`
                 author
                 date(formatString: "MMMM DD, YYYY")
                 description
+                tags
                 imageBanner {
                     childImageSharp {
                         fixed(width: 800, height: 350) {

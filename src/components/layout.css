@@ -684,3 +684,7 @@ pre tt:after {
     background: rgba(210,210,210,1);
     background: radial-gradient(circle, rgba(210,210,210,1) 0%, rgba(67,127,153,1) 35%, rgba(44,83,100,1) 100%);
   }
+
+  body.dark-mode .tag-badge {
+    background: slategray;
+  }

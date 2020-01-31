@@ -8,6 +8,9 @@ imageBannerAuthor: "Helloquence"
 imageBannerAuthorLink: "https://unsplash.com/@helloquence"
 imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
+tags:
+- React
+- Guide
 ---
 
 There’s nothing easier for developers out there than building a simple React application using create-react-app. So why should you devote your precious time to this piece?

@@ -8,6 +8,9 @@ imageBannerAuthor: "Kelly Sikkema"
 imageBannerAuthorLink: "https://unsplash.com/@kellysikkema"
 imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
+tags:
+- React
+- Guide
 ---
 
 Forms are used all over the place. Web developers can’t survive without at least a decent knowledge of forms. They are in every web app that has some kind of interaction with a user.

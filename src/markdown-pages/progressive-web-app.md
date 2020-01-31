@@ -8,6 +8,10 @@ imageBannerAuthor: "Rami Al-zayat"
 imageBannerAuthorLink: "https://unsplash.com/@rami_alzayat"
 imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
+tags:
+- SEO
+- Accessibility
+- Guide
 ---
 
 Every website must be tremendously easily accessible to become successful these days.

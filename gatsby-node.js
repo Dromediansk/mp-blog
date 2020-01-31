@@ -14,11 +14,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
-  return graphql(`
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`);
+  const result = await graphql(`
     {
-        allMarkdownRemark {
+      postsRemark: allMarkdownRemark {
           edges {
             node {
               fields {
@@ -28,15 +29,15 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(result => {
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve(`./src/templates/blog-post.js`),
-        context: {
-          slug: node.fields.slug
-        }
-      })
+    `)
+  const posts = result.data.postsRemark.edges;
+  posts.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: blogPostTemplate,
+      context: {
+        slug: node.fields.slug
+      }
     })
   })
 }
