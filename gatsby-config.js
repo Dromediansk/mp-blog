@@ -103,6 +103,20 @@ module.exports = {
             }
           }
         `,
+                setup: ({
+                    query: {
+                        site: { siteMetadata },
+                        ...rest
+                    },
+                }) => {
+                    return {
+                        ...siteMetadata,
+                        ...rest,
+                        custom_namespaces: {
+                            "media": "http://search.yahoo.com/mrss/"
+                        },
+                    }
+                },
                 feeds: [
                     {
                         serialize: ({ query: { site, allMarkdownRemark } }) => {
@@ -118,7 +132,7 @@ module.exports = {
                                     guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                                     author: edge.node.frontmatter.author,
                                     custom_elements: [
-                                        { 'image_link': siteUrl + edge.node.frontmatter.imageBanner.publicURL }],
+                                        { 'media:content': siteUrl + edge.node.frontmatter.imageBanner.publicURL }],
                                 })
                             })
                         },
