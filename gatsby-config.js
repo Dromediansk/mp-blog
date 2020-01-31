@@ -136,6 +136,8 @@ module.exports = {
                                             'media:content': {
                                                 _attr: {
                                                     url: siteUrl + edge.node.frontmatter.imageBanner.publicURL,
+                                                    height: 200,
+                                                    width: 300,
                                                     type: 'image/jpg'
                                                 }
                                             }
