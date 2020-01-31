@@ -117,10 +117,8 @@ module.exports = {
                                     url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                                     guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                                     author: edge.node.frontmatter.author,
-                                    enclosure: edge.node.frontmatter.imageBanner && {
-                                        url: siteUrl + edge.node.frontmatter.imageBanner.publicURL,
-                                    },
-                                    custom_elements: [{ 'content:encoded': edge.node.html }],
+                                    custom_elements: [
+                                        { 'image_link': siteUrl + edge.node.frontmatter.imageBanner.publicURL }],
                                 })
                             })
                         },
