@@ -7,9 +7,10 @@ const Form = styled.form`
     flex-direction: column;
     background: #ddd;
     color: #2a2a2a;
-    border-radius: 4px;
+    border-radius: 6px;
     font-family: -apple-system, Helvetica, Arial, sans-serif;
-    padding: 2rem;
+    font-size: 0.85rem;
+    padding: 0.8rem 1.2rem;
     p {
         margin-top: 0;
         margin-bottom: 1rem;
@@ -17,12 +18,16 @@ const Form = styled.form`
     input {
         color: #2a2a2a;
         width: 100%;
-        border: none;
+        border: 1px solid lightgrey;
         outline: none;
+        border-radius: 6px 0 0 6px;
+        transition: all .3s ease;
+        &:focus-within {
+            border-color: slategrey;
+        }
     }
     button, input {
         padding: 0.5rem 1rem;
-        border-radius: 4px;
         @media only screen and (max-width: 768px) {
             margin: 0.3rem 0;
         }
@@ -34,14 +39,15 @@ const Form = styled.form`
 
 const FormButton = styled.button`
     display: inline-block;
-    border: none;
-    background-color: #DD0505;
+    border: 1px solid #f0ad4e;
+    border-radius: 0 6px 6px 0;
+    background-color: #f0ad4e;
     color: white;
     letter-spacing: 1px;
     transition: all 0.2s linear; 
     :hover {
         cursor: pointer;
-        background: #f0ad4e;
+        background: #2c5364;
     }
 `
 

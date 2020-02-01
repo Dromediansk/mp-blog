@@ -9,6 +9,17 @@ import { Twitter } from "styled-icons/boxicons-logos/Twitter"
 import Avatar from "../components/image"
 import SEO from "../components/seo"
 import SubscribeForm from "../components/subscribeForm"
+import TagBadge from "../components/tagBadge"
+
+const TagsList = styled.ul`
+  margin: 0 0 10px 0;
+  display: inline-flex;
+  align-items: flex-end;
+  list-style: none;
+  a {
+      font-style: normal;
+  }
+`
 
 const BlogContainer = styled.div`
     margin-top: 20px;
@@ -49,7 +60,7 @@ const ImgCaption = styled.div`
 `
 
 const DescriptionWrapper = styled.div`
-    padding: 2rem 0;
+    padding: 1rem 0 2rem 0;
     margin: auto 0;
     display: flex;
     align-items: center;
@@ -117,6 +128,11 @@ export default ({ data, pageContext }) => {
             />
             <BlogContainer>
                 <h1>{post.frontmatter.title}</h1>
+                <TagsList>
+                    {post.frontmatter.tags.map((tag, index) => (
+                        <TagBadge tag={tag} key={index} />
+                    ))}
+                </TagsList>
                 <DescriptionWrapper>
                     <div>
                         <Avatar />
@@ -203,6 +219,7 @@ export const query = graphql`
                 author
                 date(formatString: "MMMM DD, YYYY")
                 description
+                tags
                 imageBanner {
                     childImageSharp {
                         fixed(width: 800, height: 350) {

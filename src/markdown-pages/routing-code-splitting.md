@@ -8,6 +8,9 @@ imageBannerAuthor: "Nicholas Jeffway"
 imageBannerAuthorLink: "https://unsplash.com/@nich0lasvictor"
 imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
+tags:
+- React
+- Performance
 ---
 
 If you want multiple routes in your React app, you should have knowledge of implementing React Router. It’s not that difficult.

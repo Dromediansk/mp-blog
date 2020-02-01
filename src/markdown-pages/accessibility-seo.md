@@ -8,6 +8,9 @@ imageBannerAuthor: "Benjamin Dada"
 imageBannerAuthorLink: "https://unsplash.com/@dadaben_"
 imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
+tags:
+- SEO
+- Accessibility
 ---
 
 You’ve deployed a promising website, but Google doesn’t show it in search results at all. I know how you feel.
