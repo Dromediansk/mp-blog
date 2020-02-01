@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 import { Link } from 'gatsby';
-import { slugify, determineTagColor } from '../utils/utilFunctions';
+import { slugify } from '../utils/utilFunctions';
 
-import { PriceTags } from "styled-icons/icomoon/PriceTags";
+import TagBadge from './tagBadge';
 
 const BlogWrapper = styled.div`
   border: 2px solid #ddd;
@@ -108,17 +108,6 @@ const TagsList = styled.ul`
   }
 `
 
-const TagBadge = styled.span`
-  background: #eee;
-  padding: 0.5rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-`
-
-const TagItem = styled(PriceTags)`
-  padding-right: 0.2rem;
-`
-
 const BlogPost = ({ node }) => {
 
   return (
@@ -133,10 +122,7 @@ const BlogPost = ({ node }) => {
               {node.frontmatter.tags.map((tag, index) => (
                 <li key={index}>
                   <Link to={`/?tag=${slugify(tag)}`}>
-                    <TagBadge className="tag-badge">
-                      <TagItem size="20" fill={determineTagColor(tag)} />
-                      <span>{tag}</span>
-                    </TagBadge>
+                    <TagBadge tag={tag} />
                   </Link>
                 </li>
               ))}

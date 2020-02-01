@@ -1,26 +1,45 @@
 import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
-import styled from "styled-components"
+import { slugify } from '../utils/utilFunctions';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SubscribeForm from "../components/subscribeForm"
 import BlogPost from "../components/blogPost";
+import FilterBanner from "../components/filterBanner";
 
 export default ({ data }) => {
+  const [filterActive, setFilterActive] = useState(false);
   const [activeTag, setActiveTag] = useState('');
+  const [searchValue, setSearchValue] = useState('');
 
   const path = window.location.href;
+  const posts = data.allMarkdownRemark.edges;
 
   useEffect(() => {
     setActiveTag(window.location.search.slice(5))
   }, [path])
 
-  const filteredData = data.allMarkdownRemark.edges.filter(post => {
-    const { tags } = post.node.frontmatter;
-    return (
-      tags.join("").toLowerCase().includes(activeTag.toLowerCase())
-    )
+  useEffect(() => {
+    if (activeTag || searchValue) {
+      setFilterActive(true);
+    } else {
+      setFilterActive(false);
+    }
+  }, [activeTag, searchValue])
+
+  const handleSearchChange = (event) => {
+    const query = event.target.value;
+    setSearchValue(query);
+  }
+
+  const filteredData = posts.filter(post => {
+    const excerpt = post.node.excerpt;
+    const { tags, title } = post.node.frontmatter;
+    const slugifiedTags = tags.map(tag => slugify(tag));
+    return slugifiedTags.join("").includes(activeTag.toLowerCase()) &&
+      (excerpt.toLowerCase().includes(searchValue.toLowerCase()) ||
+        title.toLowerCase().includes(searchValue.toLowerCase()))
   })
 
   return (
@@ -28,11 +47,12 @@ export default ({ data }) => {
       <SEO />
       <h1>BLOG</h1>
       <SubscribeForm />
-      {activeTag ?
+      <FilterBanner searchChange={handleSearchChange} />
+      {filterActive ?
         filteredData.map(({ node }) => (
           <BlogPost key={node.id} node={node} />
         )) :
-        (data.allMarkdownRemark.edges.map(({ node }) => (
+        (posts.map(({ node }) => (
           <BlogPost key={node.id} node={node} />
         )))}
     </Layout>
