@@ -99,6 +99,9 @@ const TagsList = styled.ul`
   display: inline-flex;
   align-items: flex-end;
   list-style: none;
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 1rem; 
+  }
 `
 
 const BlogPost = ({ node }) => {

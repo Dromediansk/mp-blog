@@ -9,7 +9,7 @@ const Form = styled.form`
     color: #2a2a2a;
     border-radius: 4px;
     font-family: -apple-system, Helvetica, Arial, sans-serif;
-    padding: 2rem;
+    padding: 1.2rem 2rem;
     p {
         margin-top: 0;
         margin-bottom: 1rem;
