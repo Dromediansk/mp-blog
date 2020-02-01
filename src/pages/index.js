@@ -8,18 +8,19 @@ import SubscribeForm from "../components/subscribeForm"
 import BlogPost from "../components/blogPost";
 import FilterBanner from "../components/filterBanner";
 
-export default ({ data }) => {
+export default ({ data, location }) => {
   const [filterActive, setFilterActive] = useState(false);
   const [activeTag, setActiveTag] = useState('');
   const [searchValue, setSearchValue] = useState('');
 
-  const path = window.location.href;
+  const path = location.href;
+  const search = location.search;
   const posts = data.allMarkdownRemark.edges;
   const tagListTotal = data.allMarkdownRemark.group;
 
   useEffect(() => {
-    setActiveTag(window.location.search.slice(5))
-  }, [path])
+    setActiveTag(search.slice(5))
+  }, [path, search])
 
   useEffect(() => {
     if (activeTag || searchValue) {
@@ -32,6 +33,12 @@ export default ({ data }) => {
   const handleSearchChange = (event) => {
     const query = event.target.value;
     setSearchValue(query);
+  }
+
+  const clearFilter = () => {
+    setActiveTag('');
+    setSearchValue('');
+    setFilterActive(false);
   }
 
   const filteredData = posts.filter(post => {
@@ -48,7 +55,7 @@ export default ({ data }) => {
       <SEO />
       <h1>BLOG</h1>
       <SubscribeForm />
-      <FilterBanner searchChange={handleSearchChange} tagList={tagListTotal} />
+      <FilterBanner searchValue={searchValue} searchChange={handleSearchChange} tagList={tagListTotal} filterActive={filterActive} clearFilter={clearFilter} />
       {filterActive ?
         filteredData.map(({ node }) => (
           <BlogPost key={node.id} node={node} />
