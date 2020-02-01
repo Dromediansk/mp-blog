@@ -15,6 +15,7 @@ export default ({ data }) => {
 
   const path = window.location.href;
   const posts = data.allMarkdownRemark.edges;
+  const tagListTotal = data.allMarkdownRemark.group;
 
   useEffect(() => {
     setActiveTag(window.location.search.slice(5))
@@ -42,12 +43,14 @@ export default ({ data }) => {
         title.toLowerCase().includes(searchValue.toLowerCase()))
   })
 
+  console.log('list', tagListTotal)
+
   return (
     <Layout>
       <SEO />
       <h1>BLOG</h1>
       <SubscribeForm />
-      <FilterBanner searchChange={handleSearchChange} />
+      <FilterBanner searchChange={handleSearchChange} tagList={tagListTotal} />
       {filterActive ?
         filteredData.map(({ node }) => (
           <BlogPost key={node.id} node={node} />
@@ -62,6 +65,10 @@ export default ({ data }) => {
 export const query = graphql`
   query {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
       edges {
         node {
           id

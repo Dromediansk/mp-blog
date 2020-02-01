@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 import { Link } from 'gatsby';
-import { slugify } from '../utils/utilFunctions';
 
 import TagBadge from './tagBadge';
 
@@ -100,12 +99,6 @@ const TagsList = styled.ul`
   display: inline-flex;
   align-items: flex-end;
   list-style: none;
-  li {
-    margin-right: 10px;
-  }
-  a {
-    text-decoration: none;
-  }
 `
 
 const BlogPost = ({ node }) => {
@@ -120,11 +113,7 @@ const BlogPost = ({ node }) => {
             </BlogTitle>
             <TagsList>
               {node.frontmatter.tags.map((tag, index) => (
-                <li key={index}>
-                  <Link to={`/?tag=${slugify(tag)}`}>
-                    <TagBadge tag={tag} />
-                  </Link>
-                </li>
+                <TagBadge tag={tag} key={index} />
               ))}
             </TagsList>
           </TitleWrapper>

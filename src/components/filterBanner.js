@@ -1,20 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 import { SearchAlt2 } from 'styled-icons/boxicons-regular/SearchAlt2';
+import TagBadge from './tagBadge';
 
 const FilterWrapper = styled.div`
     display: flex;
     @media only screen and (max-width: 768px) {
-    flex-direction: column;
-  }
+        flex-direction: column;
+    }
 `
 
 const SearchContainer = styled.div`
-    flex-basis: 60%;
+    flex-basis: 40%;
 `
 
 const TagsContainer = styled.div`
-    flex-basis: 40%;
+    flex-basis: 60%;
+    margin-left: 1rem;
+     @media only screen and (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
 `
 
 const SearchInputWrapper = styled.div`
@@ -93,8 +99,18 @@ const SearchInput = styled.input`
 const SearchIcon = styled(SearchAlt2)`
 
 `
+const TagListWrapper = styled.ul`
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    > a {
+        font-style: normal;
+        margin-bottom: 0.2rem;
+    }
+`
 
-const FilterBanner = ({ searchChange }) => {
+const FilterBanner = ({ searchChange, tagList }) => {
     return <FilterWrapper>
         <SearchContainer>
             <h2>Search</h2>
@@ -105,6 +121,10 @@ const FilterBanner = ({ searchChange }) => {
         </SearchContainer>
         <TagsContainer>
             <h2>Tags</h2>
+            <TagListWrapper>
+                {tagList.map((tag, index) => (
+                    <TagBadge key={index} tag={tag.fieldValue} />))}
+            </TagListWrapper>
         </TagsContainer>
     </FilterWrapper>
 }
