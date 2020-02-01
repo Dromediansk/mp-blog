@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { SearchAlt2 } from 'styled-icons/boxicons-regular/SearchAlt2';
 import TagBadge from './tagBadge';
+import { Link } from 'gatsby';
 
 const FilterWrapper = styled.div`
     display: flex;
@@ -97,8 +98,28 @@ const SearchInput = styled.input`
 `
 
 const SearchIcon = styled(SearchAlt2)`
-
 `
+
+const TagHeader = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
+const ClearButton = styled.button`
+    height: 2rem;
+    padding: 0.1rem 0.6rem;
+    background: #eee;
+    color: #aaa;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+    :hover {
+        background: lightgrey;
+    }
+`
+
 const TagListWrapper = styled.ul`
     margin: 0;
     display: flex;
@@ -110,17 +131,25 @@ const TagListWrapper = styled.ul`
     }
 `
 
-const FilterBanner = ({ searchChange, tagList }) => {
+const FilterBanner = ({ searchValue, searchChange, tagList, filterActive, clearFilter }) => {
     return <FilterWrapper>
         <SearchContainer>
             <h2>Search</h2>
             <SearchInputWrapper>
                 <span><SearchIcon size="20" /></span>
-                <SearchInput type="text" placeholder="Search for keyword.." onChange={searchChange} />
+                <SearchInput value={searchValue} type="text" placeholder="Search for keyword.." onChange={searchChange} />
             </SearchInputWrapper>
         </SearchContainer>
         <TagsContainer>
-            <h2>Tags</h2>
+            <TagHeader>
+                <h2>Tags</h2>
+                {filterActive &&
+                    <Link to="/">
+                        <ClearButton onClick={clearFilter}>
+                            Clear
+                        </ClearButton>
+                    </Link>}
+            </TagHeader>
             <TagListWrapper>
                 {tagList.map((tag, index) => (
                     <TagBadge key={index} tag={tag.fieldValue} />))}
