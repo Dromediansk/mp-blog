@@ -17,8 +17,10 @@ const BlogWrapper = styled.div`
 `
 
 const Post = styled.div`
-  text-decoration: none;
   color: grey;
+  a {
+    text-decoration: none;
+  }
   p {
     padding-top: 0.5rem;
   }
@@ -129,7 +131,9 @@ const BlogPost = ({ node }) => {
             </Link>
           </ImageContainer>
         </TitleContainer>
-        <p>{node.excerpt}</p>
+        <Link to={node.fields.slug}>
+          <p>{node.excerpt}</p>
+        </Link>
       </Post>
       <BasicData>
         <BasicDataDiv>{node.frontmatter.date}</BasicDataDiv>

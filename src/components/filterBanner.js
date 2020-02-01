@@ -63,15 +63,15 @@ const SearchInputWrapper = styled.div`
         font-size: 14px;
         line-height: 25px;
         color: #99A3BA;
-        background: #EEF4FF;
-        border: 1px solid #CDD9ED;
+        background: #eee;
+        border: 1px solid lightgrey;
         transition: all .3s ease;
     }
     &:focus-within {
         & > span {
             color: #fff;
-            background: #678EFE;
-            border-color: #275EFE;
+            background: slategrey;
+            border-color: slategrey;
         }
     }
 `
@@ -87,12 +87,12 @@ const SearchInput = styled.input`
     border-radius: 6px;
     -webkit-appearance: none;
     color: #99A3BA;
-    border: 1px solid #CDD9ED;
+    border: 1px solid lightgrey;
     background: #fff;
     transition: border .3s ease;
     &:focus {
         outline: none;
-        border-color: #275EFE;
+        border-color: slategrey;
     }
 `
 

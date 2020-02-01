@@ -43,8 +43,6 @@ export default ({ data }) => {
         title.toLowerCase().includes(searchValue.toLowerCase()))
   })
 
-  console.log('list', tagListTotal)
-
   return (
     <Layout>
       <SEO />

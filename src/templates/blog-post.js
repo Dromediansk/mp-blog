@@ -16,6 +16,9 @@ const TagsList = styled.ul`
   display: inline-flex;
   align-items: flex-end;
   list-style: none;
+  a {
+      font-style: normal;
+  }
 `
 
 const BlogContainer = styled.div`
