@@ -106,7 +106,7 @@ const TagHeader = styled.div`
 `
 
 const ClearButton = styled.button`
-    height: 2rem;
+    height: 1.8rem;
     padding: 0.1rem 0.6rem;
     background: #eee;
     color: #aaa;
@@ -115,6 +115,7 @@ const ClearButton = styled.button`
     cursor: pointer;
     transition: all 0.3s;
     outline: none;
+    font-style: normal;
     :hover {
         background: lightgrey;
     }
@@ -135,7 +136,7 @@ const FilterBanner = ({ searchValue, searchChange, tagList, filterActive, clearF
     return <FilterWrapper>
         <SearchContainer>
             <h2>Search</h2>
-            <SearchInputWrapper>
+            <SearchInputWrapper className="search-wrapper">
                 <span><SearchIcon size="20" /></span>
                 <SearchInput value={searchValue} type="text" placeholder="Search for keyword.." onChange={searchChange} />
             </SearchInputWrapper>
@@ -145,7 +146,7 @@ const FilterBanner = ({ searchValue, searchChange, tagList, filterActive, clearF
                 <h2>Tags</h2>
                 {filterActive &&
                     <Link to="/">
-                        <ClearButton onClick={clearFilter}>
+                        <ClearButton onClick={clearFilter} className="clear-btn">
                             Clear
                         </ClearButton>
                     </Link>}

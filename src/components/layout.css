@@ -688,3 +688,35 @@ pre tt:after {
   body.dark-mode .tag-badge {
     background: slategray;
   }
+
+  body.dark-mode .search-wrapper {
+  }
+
+  body.dark-mode .search-wrapper span {
+      background: slategray;
+      border-color: slategray;
+  }
+
+  body.dark-mode .search-wrapper:focus-within > span  {
+      border-color: #eee;
+      background: lightgrey;
+      color: #aaa;
+  }
+
+  body.dark-mode .search-wrapper:focus-within > input {
+    border-color: #eee;
+  }
+
+  body.dark-mode .search-wrapper > input::placeholder {
+      color: #5e5e5e;
+  }
+
+  body.dark-mode .clear-btn {
+    background: slategray;
+    color: #eee;
+  }
+
+  body.dark-mode .clear-btn:hover {
+    background: darkgrey;
+    color: #eee;
+  }
