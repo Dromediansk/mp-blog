@@ -30,6 +30,7 @@ const Form = styled.form`
         padding: 0.5rem 1rem;
         @media only screen and (max-width: 768px) {
             margin: 0.3rem 0;
+            border-radius: 6px;
         }
     }
     @media only screen and (max-width: 768px) {

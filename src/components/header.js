@@ -49,7 +49,7 @@ const MainPageButton = styled.button`
     background: #f0ad4e;
     color: #ddd;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s;
     outline: none;
