@@ -116,20 +116,20 @@ const TwitterIcon = styled(Twitter)`
 export default ({ data, pageContext }) => {
     const post = data.markdownRemark
     const baseUrl = "https://www.miroslavpillar.com"
-    const { imageBanner } = post.frontmatter
+    const { imageBanner, title, description, tags, date, author, imageBannerAuthor, imageBannerAuthorLink, imageBannerSource, imageBannerSourceLink } = post.frontmatter
     const imageBannerPath = imageBanner && imageBanner.childImageSharp.fixed.src
     return (
         <Layout>
             <SEO
-                title={post.frontmatter.title}
+                title={title}
                 image={imageBannerPath}
-                description={post.frontmatter.description}
+                description={description}
                 pathname={pageContext.slug}
             />
             <BlogContainer>
-                <h1>{post.frontmatter.title}</h1>
+                <h1>{title}</h1>
                 <TagsList>
-                    {post.frontmatter.tags.map((tag, index) => (
+                    {tags.map((tag, index) => (
                         <TagBadge tag={tag} key={index} />
                     ))}
                 </TagsList>
@@ -137,20 +137,20 @@ export default ({ data, pageContext }) => {
                     <div>
                         <Avatar />
                     </div>
-                    <Description>{post.frontmatter.description}</Description>
+                    <Description>{description}</Description>
                 </DescriptionWrapper>
                 <BlogPublish>
-                    <span>Published: {post.frontmatter.date}</span>
-                    <span>Author: {post.frontmatter.author}</span>
+                    <span>Published: {date}</span>
+                    <span>Author: {author}</span>
                 </BlogPublish>
                 <ImgBannerWrapper>
                     <Helper>
                         <img src={imageBannerPath} alt="banner" />
                     </Helper>
                     <ImgCaption>
-                        <a href={post.frontmatter.imageBannerAuthorLink} target="_blank"
-                            rel="noopener noreferrer">{post.frontmatter.imageBannerAuthor}</a> <span>by</span> <a href={post.frontmatter.imageBannerSourceLink} target="_blank"
-                                rel="noopener noreferrer">{post.frontmatter.imageBannerSource}</a>
+                        <a href={imageBannerAuthorLink} target="_blank"
+                            rel="noopener noreferrer">{imageBannerAuthor}</a> <span>by</span> <a href={imageBannerSourceLink} target="_blank"
+                                rel="noopener noreferrer">{imageBannerSource}</a>
                     </ImgCaption>
                 </ImgBannerWrapper>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -192,7 +192,7 @@ export default ({ data, pageContext }) => {
                                         baseUrl +
                                         pageContext.slug +
                                         "&text=" +
-                                        post.frontmatter.title +
+                                        title +
                                         "&via" +
                                         "twitterHandle"
                                     }
