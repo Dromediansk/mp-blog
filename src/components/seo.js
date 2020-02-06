@@ -1,5 +1,5 @@
 import React from "react"
-import { Helmet } from "react-helmet"
+import { Helmet, HelmetProvider } from "react-helmet-async"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
@@ -24,7 +24,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
             }
 
             return (
-                <>
+                <HelmetProvider>
                     <Helmet title={seo.title} htmlAttributes={{ lang: 'en' }}>
                         <meta name="description" content={seo.description} />
                         <meta name="image" content={seo.image} />
@@ -43,7 +43,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
                         )}
                         {seo.image && <meta name="twitter:image" content={seo.image} />}
                     </Helmet>
-                </>
+                </HelmetProvider>
             )
         }}
     />
