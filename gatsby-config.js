@@ -5,7 +5,7 @@ module.exports = {
         author: `Miroslav Pillar`,
         url: 'https://www.miroslavpillar.com',
         siteUrl: 'https://www.miroslavpillar.com',
-        image: '/src/images/avatar.jpg',
+        image: '/src/images/main-image-banner.jpg',
         article: true,
     },
     plugins: [
