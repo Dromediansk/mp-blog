@@ -38,7 +38,11 @@ However, static rendering, as well as Gatsby, can also have its disadvantages.
 
 For the reasons mentioned above, Gatsby is a great choice when building non-dynamical (static) websites, in which a view 
 isn’t changed so often and you can predict all possible requests. That could be a blog website, documentation, news, etc.
-Great examples of using Gatsby are from familiar companies such as [The Official React Website](https://reactjs.org/), [Braun eCommerce](https://ca.braun.com/en-ca) or [Airbnb Engineering & Data Science](https://airbnb.io/).
+Great examples of using Gatsby are from familiar companies such as: 
+
+- [The Official React Website](https://reactjs.org/), 
+- [Braun eCommerce](https://ca.braun.com/en-ca) or 
+- [Airbnb Engineering & Data Science](https://airbnb.io/).
 
 #### Other alternatives to the static rendering
 
@@ -89,7 +93,7 @@ Gatsby is using GraphQL for managing the data. It’s a query language that serv
 In Gatsby, you can access GraphQL and generate queries by visiting the following address:
 
 ```
-http://localhost:8000/\__graphql
+http://localhost:8000/__graphql
 ```
 
 # Exploring the package
