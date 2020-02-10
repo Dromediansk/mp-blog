@@ -215,7 +215,7 @@ Here’s a brief description of what’s going on:
 -   `createPages` is another [function in Node APIs](https://www.gatsbyjs.org/docs/node-apis/#createPages), which creates pages as soon as a generation of nodes and creation of the GraphQL schema are complete.
 -   In variable `blogPostTemplate` we are storing the absolute path to the blog template `blog-post.js`, which we haven’t created yet.
 -   In `posts` we are defining an array of objects with one property — slug. We will obtain it asynchronously from GraphQL.
--   We’re mapping through `posts` and calling action`createPage`, which has parameters `path`, `component` and `context`. You can read the [full documentation of](https://www.gatsbyjs.org/docs/actions/#createPage) `[createPage](https://www.gatsbyjs.org/docs/actions/#createPage)`.
+-   We’re mapping through `posts` and calling action`createPage()`, which has parameters `path`, `component` and `context`. You can read the [full documentation of `createPage()`](https://www.gatsbyjs.org/docs/actions/#createPage).
 
 # Creating a template for each node
 
@@ -232,7 +232,7 @@ We need to have a template for our posts, which has the same structure and styli
 -   The whole content of each post is implemented here:
 
 ```
-<div dangerouslySetInnerHTML={{ \_\_html: post.html }} />
+<div dangerouslySetInnerHTML={{ __html: post.html }} />
 ```
 
 Although in React, it’s not recommended to use this technique, it’s safe in Gatsby because the content is statically served.
