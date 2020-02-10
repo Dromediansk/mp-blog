@@ -151,10 +151,10 @@ As I said earlier, every plugin you install needs also to be added to `gatsby-co
 // gatsby-config.js
 ...
 {
-    resolve: \`gatsby-source-filesystem\`,
+    resolve: `gatsby-source-filesystem`,
     options: {
-        name: \`images\`,
-        path: \`${\_\_dirname}/src/images\`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
     },
 },
 <b>`gatsby-transformer-remark`,</b>
@@ -166,10 +166,10 @@ Now we’re ready to convert Markdown files into HTML, but we don’t have acces
 
 <pre>
 <b>{
-    resolve: \`gatsby-source-filesystem\`,
+    resolve: `gatsby-source-filesystem`,
     options: {
-        name: \`markdowns\`,
-        path: \`${\_\_dirname}/src/markdown-posts\`,
+        name: `markdowns`,
+        path: `${__dirname}/src/markdown-posts`,
     },
 },</b>
 `gatsby-transformer-remark`,
