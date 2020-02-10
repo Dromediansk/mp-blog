@@ -18,6 +18,9 @@ const determineTagColor = (tag) => {
         case 'javascript':
             color = '#CCCC00';
             break;
+        case 'gatsby':
+            color = 'darkviolet';
+            break;
         case 'seo':
             color = 'brown';
             break;
