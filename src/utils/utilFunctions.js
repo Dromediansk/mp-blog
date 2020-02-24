@@ -33,7 +33,7 @@ const determineTagColor = (tag) => {
         case 'accessibility':
             color = 'slateblue';
             break;
-        case 'inspirational':
+        case 'css':
             color = 'blue';
             break;
         default:

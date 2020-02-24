@@ -9,7 +9,6 @@ imageBannerAuthorLink: "https://unsplash.com/@jessebowser"
 imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
 tags:
-- Inspirational
 - Javascript
 ---
 
