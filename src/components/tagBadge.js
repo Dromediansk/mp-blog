@@ -11,6 +11,10 @@ const TagLink = styled(Link)`
   margin-right: 0.3rem;
   border-radius: 20px;
   font-size: 0.8rem;
+  transition: all 0.3s;
+  :hover {
+    background: #ddd;
+  }
 `
 
 const Icon = styled(PriceTags)`

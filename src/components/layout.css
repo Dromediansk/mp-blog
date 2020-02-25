@@ -689,6 +689,10 @@ pre tt:after {
     background: slategray;
   }
 
+  body.dark-mode .tag-badge:hover {
+    background: #8c99a6;
+  }
+
   body.dark-mode .search-wrapper {
   }
 

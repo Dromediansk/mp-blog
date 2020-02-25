@@ -42,13 +42,14 @@ const TitleContainer = styled.div`
 const ImageContainer = styled.div`
   flex-basis:33.33%;
   width: 13rem;
-  height: 8.5rem;
+  height: 8rem;
   border: 2px double black;
   overflow: hidden;
   img {
     height: 100%;
     width: auto;
     overflow: hidden;
+    object-fit: cover;
   }
   @media only screen and (max-width: 768px) {
     width: 15rem;
@@ -107,7 +108,6 @@ const TagsList = styled.ul`
 `
 
 const BlogPost = ({ node }) => {
-
   return (
     <BlogWrapper key={node.id} className="blog-wrapper">
       <Post>
