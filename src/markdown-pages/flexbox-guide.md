@@ -3,7 +3,7 @@ title: A Comprehensive Guide to Flexbox
 author: "Miroslav Pillar"
 date: "2020-05-06"
 description: "Learn Flexbox with some humor."
-imageBanner: "../images/build-blog.jpg"
+imageBanner: "../images/flexbox_guide.jpg"
 imageBannerAuthor: "Hal Gatewood"
 imageBannerAuthorLink: "https://unsplash.com/@halgatewood"
 imageBannerSource: "Unsplash"
