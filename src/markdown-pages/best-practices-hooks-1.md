@@ -9,8 +9,8 @@ imageBannerAuthorLink: "https://unsplash.com/@helloquence"
 imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
 tags:
-- React
-- Guide
+    - React
+    - Guide
 ---
 
 There’s nothing easier for developers out there than building a simple React application using create-react-app. So why should you devote your precious time to this piece?
@@ -25,13 +25,13 @@ I want to show you several good practices you should observe when building an ap
 
 In this piece, we’re going to build a simple app showing the characteristics of each country in the world. We will use the [REST Countries API](https://restcountries.eu/) to demonstrate good practices, including:
 
-- Proper folder structure
+-   Proper folder structure
 
-- Asynchronous code with async/await
+-   Asynchronous code with async/await
 
-- Basic error handling with try/catch blocks
+-   Basic error handling with try/catch blocks
 
-- Usage of React hooks
+-   Usage of React hooks
 
 **Note**: I’m not going to focus on styling because, in our case, it’s not important. But feel free to design and explore CSS on your own.
 
@@ -91,11 +91,11 @@ In this file, let’s make a function that’ll fetch the necessary data about a
 
 Here are some highlights you should notice:
 
-- Instead of the traditional method using promises, we’ve implemented [async/await](https://javascript.info/async-await) introduced in ES 2017 (ES8), which I consider to be a more readable approach. Just keep in mind this method is also based on Promises.
+-   Instead of the traditional method using promises, we’ve implemented [async/await](https://javascript.info/async-await) introduced in ES 2017 (ES8), which I consider to be a more readable approach. Just keep in mind this method is also based on Promises.
 
-- We’re using [try/catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) blocks for better error handling. This means if an exception is thrown within the `try`&nbsp; block, the remaining code is skipped, and control is immediately shifted to the `catch`&nbsp; block. On the other hand, if the `try`&nbsp; block is executed without any exception, the `catch`&nbsp; block is skipped.
+-   We’re using [try/catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) blocks for better error handling. This means if an exception is thrown within the `try`&nbsp; block, the remaining code is skipped, and control is immediately shifted to the `catch`&nbsp; block. On the other hand, if the `try`&nbsp; block is executed without any exception, the `catch`&nbsp; block is skipped.
 
-- I decided to use the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) for requesting the data, although there are a few other alternatives you could also consider ([AJAX](https://www.w3schools.com/js/js_ajax_http_send.asp), [axios](https://github.com/axios/axios), etc.).
+-   I decided to use the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) for requesting the data, although there are a few other alternatives you could also consider ([AJAX](https://www.w3schools.com/js/js_ajax_http_send.asp), [axios](https://github.com/axios/axios), etc.).
 
 ---
 
@@ -117,15 +117,15 @@ Now, let’s create our `CountriesContainer`&nbsp;in the `components`&nbsp;folde
 
 There are a few things you should notice:
 
-- For state management in the functional component, we’re using the `useState`&nbsp;hook. This hook is a substitution to the `setState`&nbsp;in the class-based component. Feel free to read the [documentation about State Hooks](https://reactjs.org/docs/hooks-state.html)
+-   For state management in the functional component, we’re using the `useState`&nbsp;hook. This hook is a substitution to the `setState`&nbsp;in the class-based component. Feel free to read the [documentation about State Hooks](https://reactjs.org/docs/hooks-state.html)
 
-- We are returning a list of countries from the state using `Array.map()`
+-   We are returning a list of countries from the state using `Array.map()`
 
-- Each item (country) is passed to the `<CountryCard />`&nbsp;(which we haven’t created yet) as a prop
+-   Each item (country) is passed to the `<CountryCard />`&nbsp;(which we haven’t created yet) as a prop
 
-- Each item has a key prop, which must be unique. [It’s not recommended to use an index as a key](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318)
+-   Each item has a key prop, which must be unique. [It’s not recommended to use an index as a key](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318)
 
-- For proper positioning of the cards, I’m using flexbox (check out [CountriesContainer.css](https://github.com/Dromediansk/countries-app-blog/blob/master/src/components/CountriesContainer.css))
+-   For proper positioning of the cards, I’m using flexbox (check out [CountriesContainer.css](https://github.com/Dromediansk/countries-app-blog/blob/master/src/components/CountriesContainer.css))
 
 #### UseEffect hook
 
@@ -135,14 +135,14 @@ Fetching data is recommended to execute in the [useEffect](https://reactjs.org/d
 
 `gist:Dromediansk/33e0e2a58e1ec3e799212a8e64df4102#CountriesContainer.js`
 
-- In order to write it properly, we need also to check if the component is still mounted. Therefore we are firstly declaring a new variable `componentIsMounted`. It uses [useRef hook](https://reactjs.org/docs/hooks-reference.html#useref), which returns a mutable reference object whose `.current` property is initialized to the passed argument (`initialValue`)
-- In `useEffect` we’re calling `getAllCountries` function we created earlier
-- Because it’s an asynchronous operation, we need to check if the component is still mounted. Otherwise, it could throw an error that you can’t set the state on the umounted component.
-- If it is mounted, we’re getting a response with data, which we’ll then pass into the `countries` state using `setCountries`
-- After that, we’re getting a response with data, which we’ll then pass into the `countries` state using `setCountries`
-- It’s also necessary to handle errors if they occur during the asynchronous call. In our case, we’re only logging the error to the console, but it’s a good habit to show a message to the user, that something went wrong
-- `useEffect` has a specific syntax you should be aware of. On line 14 we have a cleanup function, in which we are setting this component as unmounted. This is an equivalent to `componentWillUnmount` in class-based components
-- Notice also line 17, where we have an empty array as the second argument — it means this `useEffect` will be executed only once after rendering the component. It’s an equivalent to `componentDidMount` in class-based components.
+-   In order to write it properly, we need also to check if the component is still mounted. Therefore we are firstly declaring a new variable `componentIsMounted`. It uses [useRef hook](https://reactjs.org/docs/hooks-reference.html#useref), which returns a mutable reference object whose `.current` property is initialized to the passed argument (`initialValue`)
+-   In `useEffect` we’re calling `getAllCountries` function we created earlier
+-   Because it’s an asynchronous operation, we need to check if the component is still mounted. Otherwise, it could throw an error that you can’t set the state on the umounted component.
+-   If it is mounted, we’re getting a response with data, which we’ll then pass into the `countries` state using `setCountries`
+-   After that, we’re getting a response with data, which we’ll then pass into the `countries` state using `setCountries`
+-   It’s also necessary to handle errors if they occur during the asynchronous call. In our case, we’re only logging the error to the console, but it’s a good habit to show a message to the user, that something went wrong
+-   `useEffect` has a specific syntax you should be aware of. On line 14 we have a cleanup function, in which we are setting this component as unmounted. This is an equivalent to `componentWillUnmount` in class-based components
+-   Notice also line 17, where we have an empty array as the second argument — it means this `useEffect` will be executed only once after rendering the component. It’s an equivalent to `componentDidMount` in class-based components.
 
 #### CountryCard component
 
@@ -152,9 +152,9 @@ This component is only a dummy component, which only shows the content — that�
 
 `gist:Dromediansk/fa45bf1b4f2b799bce99c3bdfd2b401e#CountryCard.js`
 
-- This component shows the name, capital, region, and flag of the country.
+-   This component shows the name, capital, region, and flag of the country.
 
-- Feel free to copy the [styling in CountryCard.css](https://github.com/Dromediansk/countries-app-blog/blob/master/src/components/CountryCard.css).
+-   Feel free to copy the [styling in CountryCard.css](https://github.com/Dromediansk/countries-app-blog/blob/master/src/components/CountryCard.css).
 
 ---
 

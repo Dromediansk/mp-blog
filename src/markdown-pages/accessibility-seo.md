@@ -9,8 +9,8 @@ imageBannerAuthorLink: "https://unsplash.com/@dadaben_"
 imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
 tags:
-- SEO
-- Accessibility
+    - SEO
+    - Accessibility
 ---
 
 You’ve deployed a promising website, but Google doesn’t show it in search results at all. I know how you feel.
@@ -54,9 +54,9 @@ Put simply: for a website to be accessible, it must work without the use of a mo
 
 Who depends on this feature:
 
-*   People with physical disabilities who cannot use the mouse
-*   People who are blind, and cannot see the mouse pointer on the screen
-*   People with chronic conditions, such as repetitive stress injuries (RSI), who should limit or avoid the use of a mouse.
+-   People with physical disabilities who cannot use the mouse
+-   People who are blind, and cannot see the mouse pointer on the screen
+-   People with chronic conditions, such as repetitive stress injuries (RSI), who should limit or avoid the use of a mouse.
 
 Let me demonstrate an example, how to implement such a feature:
 
@@ -95,7 +95,7 @@ The second reason is that not everyone has a blazing-fast internet speed connect
 
 ### What should I know about SEO?
 
-SEO refers to search engine optimization, which is used by search engines such as Google, Bing, etc. It includes techniques and methods to increase the visibility of your website in search results. It is also an important part of digital marketing  these days.
+SEO refers to search engine optimization, which is used by search engines such as Google, Bing, etc. It includes techniques and methods to increase the visibility of your website in search results. It is also an important part of digital marketing these days.
 
 If you’re wondering how SEO works, here is a quick breakdown:
 
@@ -129,11 +129,11 @@ There are a couple of specific OG meta tags you can use:
 
 Let me break it down into smaller pieces:
 
-*   `og-title`: The title of your shared link
-*   `og-type`: The type of your object, e.g. video.movie, article, etc.
-*   `og-url`: The canonical URL of your link
-*   `og-image`: The URL of the image in the shared link
-*   `og-image:secure_url`: An alternate URL to use if the webpage requires HTTPS
+-   `og-title`: The title of your shared link
+-   `og-type`: The type of your object, e.g. video.movie, article, etc.
+-   `og-url`: The canonical URL of your link
+-   `og-image`: The URL of the image in the shared link
+-   `og-image:secure_url`: An alternate URL to use if the webpage requires HTTPS
 
 If you want to look at preview how would your sharing link look like you can try [Sharing Debugger](https://developers.facebook.com/tools/debug/sharing/) from Facebook. Just paste your link there and it will show you what is still missing. For LinkedIn, you can use [Post Inspector](https://www.linkedin.com/post-inspector/inspect/).
 

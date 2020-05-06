@@ -9,8 +9,8 @@ imageBannerAuthorLink: "https://unsplash.com/@kushagrakevat"
 imageBannerSource: "Unsplash"
 imageBannerSourceLink: "https://unsplash.com/"
 tags:
-- React
-- Performance
+    - React
+    - Performance
 ---
 
 > “The BBC found they lost an additional 10% of users for every additional second their site took to load.” — [Google Developers](https://developers.google.com/web/fundamentals/performance/why-performance-matters)
@@ -41,9 +41,9 @@ In functional components, we can use the higher-order component `React.memo()` o
 
 In class-based components there are two options for using memoization:
 
-- Use of the lifecycle Hook [shouldComponentUpdate()](https://reactjs.org/docs/react-component.html#shouldcomponentupdate).
+-   Use of the lifecycle Hook [shouldComponentUpdate()](https://reactjs.org/docs/react-component.html#shouldcomponentupdate).
 
-- Using a [PureComponent](https://reactjs.org/docs/react-api.html#reactpurecomponent).
+-   Using a [PureComponent](https://reactjs.org/docs/react-api.html#reactpurecomponent).
 
 However, we will focus on memoizing functional components, because they are preferred by the React creators.
 
@@ -55,11 +55,11 @@ Memoization can boost the performance of your app, but it has to be used with ca
 
 Here are a few examples where you might put it to use:
 
-- Pure functional component — Given the same props, it always renders the same output without causing side-effects.
+-   Pure functional component — Given the same props, it always renders the same output without causing side-effects.
 
-- The component renders often and with the same props.
+-   The component renders often and with the same props.
 
-- Big or heavy-computational function — It contains a decent amount of UI elements or has to do heavy calculations.
+-   Big or heavy-computational function — It contains a decent amount of UI elements or has to do heavy calculations.
 
 If you’re not sure whether it would give you the desired benefits, you can test your application using _[Profiling Components with the Chrome Performance Tab](https://reactjs.org/docs/optimizing-performance.html#profiling-components-with-the-chrome-performance-tab)_.
 
@@ -109,9 +109,9 @@ This Hook is equivalent to the previous technique. It memoizes and returns the s
 `const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);`
 ```
 
-- The first argument is always a function (or component), where heavy computation is executed.
+-   The first argument is always a function (or component), where heavy computation is executed.
 
-- The second argument is an array of dependencies. When one of the dependencies changes, `useMemo()` recomputes the value. If it doesn’t, it returns the last memoized value.
+-   The second argument is an array of dependencies. When one of the dependencies changes, `useMemo()` recomputes the value. If it doesn’t, it returns the last memoized value.
 
 If we implement this knowledge into our `Employee` component it will look like this:
 
