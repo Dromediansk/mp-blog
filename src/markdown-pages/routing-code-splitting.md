@@ -21,7 +21,7 @@ Also, you can’t forget about handling routes that _don’t_ exist in your app.
 
 In this piece, I’ll demonstrate how to use React Router and at the same time take into account performance optimization using route-based code splitting.
 
-To start, you can clone [the GitHub repo](https://github.com/Dromediansk/countries-app-blog/tree/pwa). If you’re interested in building the whole app from scratch, feel free to read my piece on [Best Practices for Building a React App With Hooks](https://miroslavpillar.com/best-practices-hooks-1/).
+To start, you can clone [the GitHub repo](https://github.com/Dromediansk/countries-app-blog/tree/pwa). If you’re interested in building the whole app from scratch, feel free to read my piece on [Best Practices for Building a React App With Hooks](https://blog.miroslavpillar.com/best-practices-hooks-1/).
 
 Now, let’s get down to business.
 

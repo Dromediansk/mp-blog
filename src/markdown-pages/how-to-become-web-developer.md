@@ -26,7 +26,7 @@ Okay, that’s a nice word for the start, but who am I actually and why should y
 
 My name is Miroslav Pillar and I come from Slovakia (EU). I work as a full-time Javascript software developer in an IT consultant company from May 2019. I mainly focus on frontend applications using React.
 
-I am also giving an effort to actively contribute on various private projects. You can view some of them on my website [miroslavpillar.com](https://miroslavpillar.com).
+I am also giving an effort to actively contribute on various private projects. You can view some of them on my website [miroslavpillar.com](https://blog.miroslavpillar.com).
 
 For me, the achievements mentioned above are already a great success — moreover because my educational background is in the economics studies at Masaryk University in Brno (CZ).
 

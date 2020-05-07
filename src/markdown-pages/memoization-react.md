@@ -139,6 +139,6 @@ Therefore, a good developer should, first of all, think about such implementatio
 
 Memoization is only one of the many techniques with which you can boost performance.
 
-If you have many routes in your app, you should also consider implementing another technique called code-splitting. Feel free to read a story about [_Routing and Code Splitting in React_](https://www.miroslavpillar.com/routing-code-splitting/).
+If you have many routes in your app, you should also consider implementing another technique called code-splitting. Feel free to read a story about [_Routing and Code Splitting in React_](https://blog.miroslavpillar.com/routing-code-splitting/).
 
 Thanks for reading!

@@ -18,7 +18,7 @@ _When should I use Gatsby for my website? What are the benefits of using Gatsby 
 
 Gatsby is a great framework based on React and GraphQL that helps us build blazing-fast websites. I’m going to demonstrate how you can build a basic blog website and teach the framework’s principles.
 
-The project will be created with a reference to mine — [miroslavpillar.com](http://miroslavpillar.com). Trust me, you can do that, too!
+The project will be created with a reference to mine — [miroslavpillar.com](http://blog.miroslavpillar.com). Trust me, you can do that, too!
 
 **Note:** _In order to follow this story and not get lost, you should have at least a basic knowledge of Javascript and React._
 

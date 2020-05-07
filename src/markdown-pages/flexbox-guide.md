@@ -257,7 +257,7 @@ With knowledge of Flexbox, I’m pretty sure you’ll become a better front-end 
 
 I’d say the fluent responsiveness of apps is crucial these days.
 
-If you want to position a single component, maybe Flexbox would be an overkill for your needs. For that case, you can use the `position` property, which I explain in the article [How to Use the position Property in CSS](https://www.miroslavpillar.com/position-property/).
+If you want to position a single component, maybe Flexbox would be an overkill for your needs. For that case, you can use the `position` property, which I explain in the article [How to Use the position Property in CSS](https://blog.miroslavpillar.com/position-property/).
 
 
 Thank you for reading!

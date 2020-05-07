@@ -12,13 +12,13 @@ import SubscribeForm from "../components/subscribeForm"
 import TagBadge from "../components/tagBadge"
 
 const TagsList = styled.ul`
-  margin: 0 0 10px 0;
-  display: inline-flex;
-  align-items: flex-end;
-  list-style: none;
-  a {
-      font-style: normal;
-  }
+    margin: 0 0 10px 0;
+    display: inline-flex;
+    align-items: flex-end;
+    list-style: none;
+    a {
+        font-style: normal;
+    }
 `
 
 const BlogContainer = styled.div`
@@ -83,7 +83,7 @@ const SocialWrapper = styled.div`
     flex: 50%;
     text-align: center;
     border-radius: 5px;
-     @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
         flex: 100%;
         margin: 0.5rem;
     }
@@ -115,8 +115,19 @@ const TwitterIcon = styled(Twitter)`
 
 export default ({ data, pageContext }) => {
     const post = data.markdownRemark
-    const baseUrl = "https://www.miroslavpillar.com"
-    const { imageBanner, title, description, tags, date, author, imageBannerAuthor, imageBannerAuthorLink, imageBannerSource, imageBannerSourceLink } = post.frontmatter
+    const baseUrl = "https://blog.miroslavpillar.com"
+    const {
+        imageBanner,
+        title,
+        description,
+        tags,
+        date,
+        author,
+        imageBannerAuthor,
+        imageBannerAuthorLink,
+        imageBannerSource,
+        imageBannerSourceLink,
+    } = post.frontmatter
     const imageBannerPath = imageBanner && imageBanner.childImageSharp.fixed.src
     return (
         <Layout>
@@ -148,15 +159,27 @@ export default ({ data, pageContext }) => {
                         <img src={imageBannerPath} alt="banner" />
                     </Helper>
                     <ImgCaption>
-                        <a href={imageBannerAuthorLink} target="_blank"
-                            rel="noopener noreferrer">{imageBannerAuthor}</a> <span>by</span> <a href={imageBannerSourceLink} target="_blank"
-                                rel="noopener noreferrer">{imageBannerSource}</a>
+                        <a
+                            href={imageBannerAuthorLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {imageBannerAuthor}
+                        </a>{" "}
+                        <span>by</span>{" "}
+                        <a
+                            href={imageBannerSourceLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {imageBannerSource}
+                        </a>
                     </ImgCaption>
                 </ImgBannerWrapper>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 <SubscribeForm />
                 <div className="share-social">
-                    <SocialWrapper >
+                    <SocialWrapper>
                         <h4>Share this post</h4>
                         <ul>
                             <li>

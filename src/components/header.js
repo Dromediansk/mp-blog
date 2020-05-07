@@ -1,9 +1,9 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useEffect, useState, memo } from "react"
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import Logo from '../images/Logo-portfolio.png'
+import Logo from "../images/Logo-portfolio.png"
 import DarkModeToggle from "../theme/darkModeToggle"
 
 const HeaderBanner = styled.header`
@@ -14,9 +14,9 @@ const HeaderBanner = styled.header`
     padding: 0 1rem;
     display: flex;
     align-items: center;
-    -webkit-box-shadow: 0px 5px 23px 15px rgba(169,169,169,1);
-    -moz-box-shadow: 0px 5px 23px 15px rgba(169,169,169,1);
-    box-shadow: 0px 5px 23px 15px rgba(169,169,169,1);
+    -webkit-box-shadow: 0px 5px 23px 15px rgba(169, 169, 169, 1);
+    -moz-box-shadow: 0px 5px 23px 15px rgba(169, 169, 169, 1);
+    box-shadow: 0px 5px 23px 15px rgba(169, 169, 169, 1);
     z-index: 10;
 `
 
@@ -26,10 +26,10 @@ const Transition = styled.div`
         transition: all 200ms ease-in;
     }
     .hidden {
-    visibility: hidden;
-    transition: all 200ms ease-out;
-    transform: translate(0, -100%);
-  }
+        visibility: hidden;
+        transition: all 200ms ease-out;
+        transform: translate(0, -100%);
+    }
 `
 
 const LogoStyled = styled.img`
@@ -38,8 +38,8 @@ const LogoStyled = styled.img`
     margin: 0;
     vertical-align: middle;
     @media only screen and (max-width: 768px) {
-    width: 70px;
-  }
+        width: 70px;
+    }
 `
 
 const MainPageButton = styled.button`
@@ -62,40 +62,52 @@ const MainPageButton = styled.button`
     }
 `
 
-const Header = memo(() => {
-    const [position, setPosition] = useState(0);
-    const [visible, setVisible] = useState(true);
+const Header = memo(
+    () => {
+        const [position, setPosition] = useState(0)
+        const [visible, setVisible] = useState(true)
 
-    useEffect(() => {
-        const handleScroll = () => {
-            let temp = window.pageYOffset
+        useEffect(() => {
+            const handleScroll = () => {
+                let temp = window.pageYOffset
 
-            setVisible(position > temp || temp === 0);
-            setPosition(temp)
-        };
-        window.addEventListener("scroll", handleScroll);
-        return (() => {
-            window.removeEventListener("scroll", handleScroll);
+                setVisible(position > temp || temp === 0)
+                setPosition(temp)
+            }
+            window.addEventListener("scroll", handleScroll)
+            return () => {
+                window.removeEventListener("scroll", handleScroll)
+            }
         })
-    })
 
-    return (
-        <Transition>
-            <HeaderBanner className={visible ? "active" : "hidden"}>
-                <Link
-                    to="/"
-                    style={{
-                        color: `white`,
-                        textDecoration: `none`
-                    }}
-                ><LogoStyled src={Logo} alt="MP logo" />
-                </Link>
-                <DarkModeToggle />
-                <MainPageButton><a href="https://web.miroslavpillar.com" target="_blank" rel="noopener noreferrer">Portfolio</a></MainPageButton>
-            </HeaderBanner>
-        </Transition>
-    )
-}, (prevProps, nextProps) => prevProps.visible === nextProps.visible);
+        return (
+            <Transition>
+                <HeaderBanner className={visible ? "active" : "hidden"}>
+                    <Link
+                        to="/"
+                        style={{
+                            color: `white`,
+                            textDecoration: `none`,
+                        }}
+                    >
+                        <LogoStyled src={Logo} alt="MP logo" />
+                    </Link>
+                    <DarkModeToggle />
+                    <MainPageButton>
+                        <a
+                            href="https://miroslavpillar.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Portfolio
+                        </a>
+                    </MainPageButton>
+                </HeaderBanner>
+            </Transition>
+        )
+    },
+    (prevProps, nextProps) => prevProps.visible === nextProps.visible
+)
 
 Header.propTypes = {
     siteTitle: PropTypes.string,

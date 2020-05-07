@@ -3,9 +3,9 @@ module.exports = {
         title: `MP Blog`,
         description: `Blog section about web development, Javascript and React to bring to developers new inspiration and learn something new.`,
         author: `Miroslav Pillar`,
-        url: 'https://www.miroslavpillar.com',
-        siteUrl: 'https://www.miroslavpillar.com',
-        image: '/src/images/main-image-banner.jpg',
+        url: "https://blog.miroslavpillar.com",
+        siteUrl: "https://blog.miroslavpillar.com",
+        image: "/src/images/main-image-banner.jpg",
         article: true,
     },
     plugins: [
@@ -44,28 +44,28 @@ module.exports = {
                             // Optional:
 
                             // the github handler whose gists are to be accessed
-                            username: 'Dromediansk',
+                            username: "Dromediansk",
 
                             // a flag indicating whether the github default gist css should be included or not
                             // default: true
-                            includeDefaultCss: true
-                        }
+                            includeDefaultCss: true,
+                        },
                     },
                     `gatsby-remark-copy-linked-files`,
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
                             maxWidth: 590,
-                            showCaptions: true
+                            showCaptions: true,
                         },
                         resolve: "gatsby-remark-external-links",
                         options: {
                             target: "_blank",
-                            rel: "nofollow noopener noreferrer"
-                        }
-                    }
-                ]
-            }
+                            rel: "nofollow noopener noreferrer",
+                        },
+                    },
+                ],
+            },
         },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-styled-components`,
@@ -83,13 +83,13 @@ module.exports = {
             },
         },
         {
-            resolve: 'gatsby-plugin-mailchimp',
+            resolve: "gatsby-plugin-mailchimp",
             options: {
-                endpoint: 'https://coolwebsite.us19.list-manage.com/subscribe/post?u=5f8a76349e294ef39a71a36b9&amp;id=24dae3a83f', // add your MC list endpoint here; see instructions below
-            }
+                endpoint:
+                    "https://coolwebsite.us19.list-manage.com/subscribe/post?u=5f8a76349e294ef39a71a36b9&amp;id=24dae3a83f", // add your MC list endpoint here; see instructions below
+            },
         },
         {
-
             resolve: `gatsby-plugin-feed`,
             options: {
                 query: `
@@ -113,7 +113,7 @@ module.exports = {
                         ...siteMetadata,
                         ...rest,
                         custom_namespaces: {
-                            "media": "http://search.yahoo.com/mrss/"
+                            media: "http://search.yahoo.com/mrss/",
                         },
                     }
                 },
@@ -122,27 +122,41 @@ module.exports = {
                         serialize: ({ query: { site, allMarkdownRemark } }) => {
                             const {
                                 siteMetadata: { siteUrl },
-                            } = site;
+                            } = site
 
                             return allMarkdownRemark.edges.map(edge => {
-                                return Object.assign({}, edge.node.frontmatter, {
-                                    description: edge.node.excerpt,
-                                    date: edge.node.frontmatter.date,
-                                    url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                                    guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                                    author: edge.node.frontmatter.author,
-                                    custom_elements: [
-                                        {
-                                            'media:content': {
-                                                _attr: {
-                                                    url: siteUrl + edge.node.frontmatter.imageBanner.publicURL,
-                                                    height: 200,
-                                                    width: 300,
-                                                    type: 'image/jpg'
-                                                }
-                                            }
-                                        }],
-                                })
+                                return Object.assign(
+                                    {},
+                                    edge.node.frontmatter,
+                                    {
+                                        description: edge.node.excerpt,
+                                        date: edge.node.frontmatter.date,
+                                        url:
+                                            site.siteMetadata.siteUrl +
+                                            edge.node.fields.slug,
+                                        guid:
+                                            site.siteMetadata.siteUrl +
+                                            edge.node.fields.slug,
+                                        author: edge.node.frontmatter.author,
+                                        custom_elements: [
+                                            {
+                                                "media:content": {
+                                                    _attr: {
+                                                        url:
+                                                            siteUrl +
+                                                            edge.node
+                                                                .frontmatter
+                                                                .imageBanner
+                                                                .publicURL,
+                                                        height: 200,
+                                                        width: 300,
+                                                        type: "image/jpg",
+                                                    },
+                                                },
+                                            },
+                                        ],
+                                    }
+                                )
                             })
                         },
                         query: `
