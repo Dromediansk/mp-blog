@@ -3,20 +3,17 @@ import PropTypes from "prop-types"
 import React, { useEffect, useState, memo } from "react"
 import styled from "styled-components"
 
-import Logo from "../images/Logo-portfolio.png"
+import Logo from "../images/Logo-portfolio.svg"
 import DarkModeToggle from "../theme/darkModeToggle"
 
 const HeaderBanner = styled.header`
     position: fixed;
     width: 100%;
     height: 60px;
-    background: #2c5364;
+    background: #f8f8ff;
     padding: 0 1rem;
     display: flex;
     align-items: center;
-    -webkit-box-shadow: 0px 5px 23px 15px rgba(169, 169, 169, 1);
-    -moz-box-shadow: 0px 5px 23px 15px rgba(169, 169, 169, 1);
-    box-shadow: 0px 5px 23px 15px rgba(169, 169, 169, 1);
     z-index: 10;
 `
 
@@ -46,7 +43,7 @@ const MainPageButton = styled.button`
     position: absolute;
     right: 1rem;
     padding: 0.3rem 0.6rem;
-    background: #f0ad4e;
+    background: #0d6efd;
     color: #ddd;
     border: none;
     border-radius: 6px;
@@ -95,7 +92,7 @@ const Header = memo(
                     <DarkModeToggle />
                     <MainPageButton>
                         <a
-                            href="https://miroslavpillar.com"
+                            href="https://miroslavpillar.eu"
                             target="_blank"
                             rel="noopener noreferrer"
                         >

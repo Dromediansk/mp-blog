@@ -1,8 +1,8 @@
 import React from "react"
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const FooterBanner = styled.footer`
-    background: #2c5364;
+    background: rgb(108, 117, 125);
     color: #ddd;
     height: 6vh;
     width: 100%;
@@ -16,9 +16,7 @@ const FooterBanner = styled.footer`
 `
 
 const Footer = () => (
-    <FooterBanner>
-        © {new Date().getFullYear()}, Miroslav Pillar
-    </FooterBanner>
+    <FooterBanner>© {new Date().getFullYear()}, Miroslav Pillar</FooterBanner>
 )
 
 export default Footer

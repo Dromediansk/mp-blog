@@ -201,6 +201,7 @@ html {
 }
 body {
     color: hsla(0, 0%, 0%, 0.8);
+    background: #f8f8ff;
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
     word-wrap: break-word;
@@ -652,8 +653,7 @@ body.dark-mode {
 }
 
 body.dark-mode header {
-    background: #5e5e5e;
-    box-shadow: 0px 10px 20px -8px rgba(94, 94, 94, 1);
+    background: #1b2938;
 }
 
 body.dark-mode footer {
@@ -667,7 +667,8 @@ body.dark-mode .blog-wrapper {
 
 body.dark-mode h3,
 body.dark-mode p,
-body.dark-mode a {
+body.dark-mode a,
+body.dark-mode span {
     color: #ddd;
 }
 

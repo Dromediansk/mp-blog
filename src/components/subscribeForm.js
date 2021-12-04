@@ -41,15 +41,15 @@ const Form = styled.form`
 
 const FormButton = styled.button`
     display: inline-block;
-    border: 1px solid #f0ad4e;
+    border: 1px solid #0d6efd;
     border-radius: 0 6px 6px 0;
-    background-color: #f0ad4e;
+    background-color: #0d6efd;
     color: white;
     letter-spacing: 1px;
     transition: all 0.2s linear;
     :hover {
         cursor: pointer;
-        background: #2c5364;
+        background: rgb(108, 117, 125);
     }
 `
 

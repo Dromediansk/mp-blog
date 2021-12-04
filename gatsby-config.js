@@ -76,8 +76,8 @@ module.exports = {
                 name: `MP Blog`,
                 short_name: `MP Blog`,
                 start_url: `/`,
-                background_color: `#2c5364`,
-                theme_color: `#2c5364`,
+                background_color: `rgb(108, 117, 125)`,
+                theme_color: `rgb(108, 117, 125)`,
                 display: `standalone`,
                 icon: `src/images/favicon.png`, // This path is relative to the root of the site.
             },
