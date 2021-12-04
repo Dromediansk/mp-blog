@@ -652,10 +652,6 @@ body.dark-mode {
     color: #ddd;
 }
 
-body.dark-mode header {
-    background: #1b2938;
-}
-
 body.dark-mode footer {
     background: #5e5e5e;
     color: #ddd;

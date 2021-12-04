@@ -10,7 +10,6 @@ const HeaderBanner = styled.header`
     position: fixed;
     width: 100%;
     height: 60px;
-    background: #f8f8ff;
     padding: 0 1rem;
     display: flex;
     align-items: center;
