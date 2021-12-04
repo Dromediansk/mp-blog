@@ -50,8 +50,9 @@ const MainPageButton = styled.button`
     transition: all 0.3s;
     outline: none;
     :hover {
+        color: rgba(0, 0, 0, 0.8);
         background: transparent;
-        border: 1px solid #ff9c33;
+        border: 1px solid #0d6efd;
     }
     a {
         text-decoration: none;
